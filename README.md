@@ -1,31 +1,43 @@
 # AION Omega HTML
 
-Source repository for the AION Omega HTML Codex skill, profile contracts, reference corpus, and preview tooling. The source repository is canonical; `~/.agents/skills/aion-omega-html/` is a discoverable copy used for Task 10 pressure testing.
+A work-in-progress Codex skill and reference toolkit for building clear, evidence-led HTML reports. The project combines report profiles, reusable layout patterns, a searchable example library, validation tools, and desktop/mobile preview rendering.
 
-## Prerequisites
+This is an independent prototype, not an official Codex feature or a production release.
 
-- Python 3.11 or newer
-- Node.js and npm
-- `uv` for the repository's isolated pytest command
-- Playwright Chromium for reference rendering; install the pinned Node dependency from this repository
+## Repository layout
+
+- `SKILL.md` — skill entrypoint and operating guidance.
+- `profiles/` — report profile contracts and composition rules.
+- `library/` — reusable HTML patterns and their manifests.
+- `knowledge/` and `index/` — reference material and catalog data.
+- `examples/` — profile examples.
+- `tools/` — catalog search, library validation, and preview rendering.
+- `benchmarks/` and `tests/` — example cases and quality checks.
+
+## Setup
+
+Requirements: Python 3.11+, Node.js, npm, and `uv`.
 
 ```bash
 npm install
 npx playwright install chromium
 ```
 
-## Validate and test locally
+## Useful commands
 
-Run the mechanical suite and library validator from the repository root:
+Validate the pattern library:
 
 ```bash
-uv run --no-project --with pytest pytest -q
 python3 tools/validate-library.py --root .
 ```
 
-## Render a reference
+Run the test suite:
 
-The renderer writes a 1440px desktop and 390px mobile PNG:
+```bash
+uv run --no-project --with pytest pytest -q
+```
+
+Render a reference pattern for desktop and mobile review:
 
 ```bash
 node tools/render-preview.mjs \
@@ -34,8 +46,15 @@ node tools/render-preview.mjs \
   --mobile /tmp/aion-mobile.png
 ```
 
-Inspect both images before accepting a visual change. Keep reference pages responsive and self-contained.
+Review both rendered sizes before accepting a visual change. Benchmark examples are demonstrations; inspect their content before reusing them in client work.
 
-## PoV boundary
+## Branches
 
-Plan 1 ends at the Task 12 Founder verdict. Stop there and present the evidence with one verdict candidate: PASS, CORRECT, or KILL. Do not begin Plan 2 without explicit Founder approval.
+- `main` — the later second proof-of-value work.
+- `codex/aion-omega-html-early-pov` — the earlier proof-of-value work.
+
+## Data and licensing
+
+User-specific learning records and the Founder-approved seed reference are intentionally excluded from this public repository. Do not add personal, client, or credential data to benchmark files.
+
+No license is included. Public visibility does not grant reuse rights; contact the rights holder before redistributing or adapting this work.
