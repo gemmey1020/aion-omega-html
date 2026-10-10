@@ -27,15 +27,37 @@
     "decision-led"
   ],
   "representation_affinity": [
-    "claim → evidence",
-    "evidence ledger",
-    "evidence timeline",
-    "source matrix"
+    "evidence.claim-proof",
+    "evidence.evidence-ledger",
+    "timeline.evidence-timeline",
+    "technical.diff-view"
   ],
   "anti_patterns": [
     "turning every section into a table",
     "removing narrative where narrative is clearer",
     "visually flattening important decisions",
     "spreadsheet aesthetics as default"
-  ]
+  ],
+  "contextual_treatments": {
+    "audit_evidence": {
+      "opening": "scope_and_evidence_boundary",
+      "rhythm": "claim_source_assessment_implication",
+      "density": {
+        "panel_density": "medium",
+        "metadata": "explicit",
+        "evidence_spacing": "compact_but_readable"
+      },
+      "family_affinity": [
+        "evidence",
+        "timeline",
+        "risk",
+        "technical"
+      ],
+      "preserve": [
+        "unknowns",
+        "provenance",
+        "narrative_when_clearer_than_a_table"
+      ]
+    }
+  }
 }

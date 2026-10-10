@@ -27,16 +27,38 @@
     "data-first"
   ],
   "representation_affinity": [
-    "layered architecture",
-    "control plane",
-    "data flow",
-    "linear pipeline",
-    "execution trace"
+    "architecture.layered",
+    "architecture.control-plane",
+    "architecture.data-flow",
+    "process.linear-pipeline",
+    "technical.execution-trace"
   ],
   "anti_patterns": [
     "fake sci-fi HUD",
     "neon overload",
     "decorative technical diagrams",
     "advanced libraries used only because they exist"
-  ]
+  ],
+  "contextual_treatments": {
+    "architecture_systems": {
+      "opening": "system_context_and_boundary",
+      "rhythm": "context_flow_runtime_implications",
+      "density": {
+        "panel_density": "medium_high",
+        "diagram_labels": "explicit",
+        "metadata": "technical"
+      },
+      "family_affinity": [
+        "architecture",
+        "process",
+        "technical",
+        "operational"
+      ],
+      "preserve": [
+        "causal_direction",
+        "trust_boundaries",
+        "meaningful_diagrams_only"
+      ]
+    }
+  }
 }

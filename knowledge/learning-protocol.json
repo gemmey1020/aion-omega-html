@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "principles": [
+    "scoped",
+    "append_only_history",
+    "reversible_derived_state",
+    "no_last_write_wins"
+  ],
+  "authority_classes": {
+    "founder_explicit": {
+      "source": "direct Founder instruction or correction",
+      "current_generation": "applies to the current request",
+      "persistent_activation": "check overlapping active preferences first; unresolved potential/direct conflict blocks activation",
+      "scope_rule": "use the narrowest scope supported by the Founder statement"
+    },
+    "founder_approved": {
+      "source": "a candidate or proposed rule explicitly approved by the Founder",
+      "persistent_activation": "activate only after provenance and overlapping scope are checked",
+      "supersession": "preserve prior history; replacement must identify superseded rule"
+    },
+    "repeated_observation": {
+      "source": "repeated behavior or outcome signal without explicit approval",
+      "destination": "candidate_only",
+      "active_without_founder_approval": false
+    },
+    "agent_inference": {
+      "source": "agent interpretation or inferred preference",
+      "destination": "candidate_only",
+      "active_by_default": false
+    }
+  },
+  "conflict_gate": {
+    "states": [
+      "none",
+      "contextual_difference",
+      "potential",
+      "direct"
+    ],
+    "persistent_mutation_blocked_on": [
+      "potential",
+      "direct"
+    ],
+    "no_last_write_wins": true
+  },
+  "conflict_resolutions": [
+    {
+      "id": "KEEP_OLD",
+      "label": "KEEP OLD",
+      "effect": "retain the active rule and preserve the new instruction as unresolved or candidate evidence"
+    },
+    {
+      "id": "OVERRIDE",
+      "label": "OVERRIDE",
+      "effect": "supersede the old rule without deleting its history"
+    },
+    {
+      "id": "SCOPE_SPLIT",
+      "label": "SCOPE SPLIT",
+      "effect": "replace an overlapping broad rule with the supplied non-overlapping scoped rules"
+    },
+    {
+      "id": "ONE_OFF_EXCEPTION",
+      "label": "ONE-OFF EXCEPTION",
+      "effect": "apply to one named generation and do not carry into later generations"
+    }
+  ],
+  "normal_generation": {
+    "profiles": "read_only",
+    "library": "read_only",
+    "canon": "read_only"
+  },
+  "mechanical_boundary": "The store records scopes, provenance, resolution, snapshots, and rollback; the LLM identifies semantic conflicts."
+}

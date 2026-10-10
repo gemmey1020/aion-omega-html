@@ -1,11 +1,197 @@
 {
   "default": "HTML/CSS",
   "capabilities": {
-    "HTML/CSS": {"optional": false, "guidance": "Default for static layouts."},
-    "SVG": {"optional": true, "guidance": "Use for scalable diagrams and structured vector visuals."},
-    "Canvas": {"optional": true, "guidance": "Use for atmospheric, particle, or continuous visual scenes."},
-    "D3": {"optional": true, "guidance": "Use for real data visualizations or bespoke data-driven layouts."},
-    "React": {"optional": true, "guidance": "Use for meaningful stateful interaction, filtering, or views."},
-    "Astro": {"optional": true, "guidance": "Use when multi-file structure or component build ergonomics are justified."}
+    "HTML/CSS": {
+      "optional": false,
+      "guidance": "Default for static layouts.",
+      "use_when": [
+        "static standalone reports",
+        "responsive document structure",
+        "semantic content and print styling"
+      ],
+      "avoid_when": [
+        "the request requires stateful interaction that cannot be expressed clearly without scripting"
+      ],
+      "complexity": {
+        "level": "low",
+        "cost": "low"
+      },
+      "accessibility": {
+        "baseline": "semantic HTML, visible focus, contrast, keyboard-readable order",
+        "risk": "custom controls need explicit keyboard and screen-reader behavior"
+      },
+      "offline": {
+        "support": "strong",
+        "conditions": "self-contained assets or local assets packaged with the artifact"
+      },
+      "best_families": [
+        "hero",
+        "summary",
+        "metric",
+        "comparison",
+        "timeline",
+        "process",
+        "architecture",
+        "evidence",
+        "risk",
+        "decision",
+        "narrative",
+        "technical",
+        "operational",
+        "people",
+        "financial",
+        "media",
+        "appendix"
+      ]
+    },
+    "SVG": {
+      "optional": true,
+      "guidance": "Use for scalable diagrams and structured vector visuals.",
+      "use_when": [
+        "a labeled system diagram",
+        "a causal flow or topology needs precise geometry"
+      ],
+      "avoid_when": [
+        "a semantic list or table is clearer",
+        "the diagram would be decorative"
+      ],
+      "complexity": {
+        "level": "low_to_medium",
+        "cost": "low_to_medium"
+      },
+      "accessibility": {
+        "baseline": "provide a title/description and equivalent text explanation",
+        "risk": "dense labels can become unreadable on mobile"
+      },
+      "offline": {
+        "support": "strong",
+        "conditions": "inline SVG needs no remote runtime"
+      },
+      "best_families": [
+        "architecture",
+        "process",
+        "timeline",
+        "risk",
+        "people",
+        "media"
+      ]
+    },
+    "Canvas": {
+      "optional": true,
+      "guidance": "Use for atmospheric, particle, or continuous visual scenes.",
+      "use_when": [
+        "a restrained atmospheric scene materially supports the opening"
+      ],
+      "avoid_when": [
+        "content, labels, evidence, or controls must be conveyed only in pixels",
+        "motion adds no meaning"
+      ],
+      "complexity": {
+        "level": "medium",
+        "cost": "medium"
+      },
+      "accessibility": {
+        "baseline": "provide equivalent DOM content and honor reduced motion",
+        "risk": "canvas pixels are not available as semantic text"
+      },
+      "offline": {
+        "support": "strong",
+        "conditions": "self-contained script and assets"
+      },
+      "best_families": [
+        "hero",
+        "media"
+      ]
+    },
+    "D3": {
+      "optional": true,
+      "guidance": "Use for real data visualizations or bespoke data-driven layouts.",
+      "use_when": [
+        "data-driven geometry or a custom visualization materially improves interpretation"
+      ],
+      "avoid_when": [
+        "a standard table or simple SVG is sufficient",
+        "the chart would imply unsupported precision"
+      ],
+      "complexity": {
+        "level": "medium_to_high",
+        "cost": "medium_to_high"
+      },
+      "accessibility": {
+        "baseline": "include units, descriptions, and tabular or textual equivalents",
+        "risk": "visual encoding alone may exclude readers"
+      },
+      "offline": {
+        "support": "conditional",
+        "conditions": "bundle the library locally or use a self-contained build"
+      },
+      "best_families": [
+        "metric",
+        "comparison",
+        "timeline",
+        "risk",
+        "financial"
+      ]
+    },
+    "React": {
+      "optional": true,
+      "guidance": "Use for meaningful stateful interaction, filtering, or views.",
+      "use_when": [
+        "the artifact needs meaningful state, filtering, or multiple interactive views"
+      ],
+      "avoid_when": [
+        "a static report meets the request",
+        "framework setup adds more burden than user value"
+      ],
+      "complexity": {
+        "level": "high",
+        "cost": "high"
+      },
+      "accessibility": {
+        "baseline": "preserve semantic controls, focus order, and announced state changes",
+        "risk": "custom widgets can lose native keyboard behavior"
+      },
+      "offline": {
+        "support": "conditional",
+        "conditions": "ship compiled assets locally and avoid remote runtime dependencies"
+      },
+      "best_families": [
+        "metric",
+        "comparison",
+        "operational",
+        "people",
+        "architecture"
+      ]
+    },
+    "Astro": {
+      "optional": true,
+      "guidance": "Use when multi-file structure or component build ergonomics are justified.",
+      "use_when": [
+        "a multi-file artifact or repeated component structure benefits from a build step"
+      ],
+      "avoid_when": [
+        "one standalone HTML file is the simpler deliverable",
+        "deployment infrastructure is outside scope"
+      ],
+      "complexity": {
+        "level": "medium",
+        "cost": "medium"
+      },
+      "accessibility": {
+        "baseline": "validate rendered semantic output, not only source components",
+        "risk": "hydrated islands need focus and state review"
+      },
+      "offline": {
+        "support": "strong_after_build",
+        "conditions": "deliver built files and local assets"
+      },
+      "best_families": [
+        "summary",
+        "narrative",
+        "technical",
+        "appendix",
+        "operational"
+      ]
+    }
   }
 }

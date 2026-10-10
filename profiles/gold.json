@@ -26,10 +26,10 @@
     "narrative"
   ],
   "representation_affinity": [
-    "executive verdict",
-    "recommendation statement",
-    "investment case",
-    "weighted criteria"
+    "decision.executive-verdict",
+    "decision.conditional-gate",
+    "financial.value-cost-tradeoff",
+    "comparison.weighted-matrix"
   ],
   "anti_patterns": [
     "casino gold",
@@ -38,5 +38,28 @@
     "dashboard clutter",
     "repeated dense cards",
     "gratuitous motion"
-  ]
+  ],
+  "contextual_treatments": {
+    "external_client": {
+      "opening": "executive_thesis_or_recommendation",
+      "rhythm": "executive_editorial",
+      "density": {
+        "panel_density": "low",
+        "whitespace": "high",
+        "hierarchy": "print_legible"
+      },
+      "print_aware": true,
+      "family_affinity": [
+        "summary",
+        "financial",
+        "decision",
+        "narrative"
+      ],
+      "avoid": [
+        "repeated_dense_cards",
+        "casino_gold",
+        "dashboard_clutter"
+      ]
+    }
+  }
 }

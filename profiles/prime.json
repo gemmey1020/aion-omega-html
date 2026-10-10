@@ -27,14 +27,35 @@
     "narrative"
   ],
   "representation_affinity": [
-    "particle signature",
-    "executive snapshot",
-    "KPI strip"
+    "hero.particle-signature",
+    "summary.executive-snapshot",
+    "metric.kpi-strip",
+    "narrative.long-form-chapter"
   ],
   "anti_patterns": [
     "generic neon sci-fi HUD",
     "generic SaaS card spam",
     "mandatory giant hero",
     "mandatory dashboard structure"
-  ]
+  ],
+  "contextual_treatments": {
+    "founder_strategy": {
+      "opening": "thesis_before_panels",
+      "rhythm": "open_editorial",
+      "density": {
+        "panel_density": "low",
+        "whitespace": "high",
+        "narrative_run": "longer"
+      },
+      "family_affinity": [
+        "narrative",
+        "summary",
+        "decision"
+      ],
+      "preserve": [
+        "omega_family_identity",
+        "prime_composition_freedom"
+      ]
+    }
+  }
 }

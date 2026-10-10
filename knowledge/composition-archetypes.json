@@ -1,16 +1,261 @@
 {
   "archetypes": [
-    "executive",
-    "editorial",
-    "evidence-led",
-    "decision-led",
-    "technical",
-    "architecture-led",
-    "operational",
-    "narrative",
-    "data-first",
-    "investigative",
-    "hybrid"
+    {
+      "id": "executive",
+      "opening_tendencies": [
+        "decision_or_outcome_first",
+        "compact_executive_snapshot"
+      ],
+      "rhythm": "recommendation → evidence → consequence → action",
+      "density": "medium_low",
+      "transition_tendencies": [
+        "short transitions from decision to proof",
+        "explicit section handoffs"
+      ],
+      "family_affinity": [
+        "summary",
+        "metric",
+        "decision",
+        "financial"
+      ],
+      "avoid": [
+        "generic card grids",
+        "repeating the same conclusion in every section"
+      ]
+    },
+    {
+      "id": "editorial",
+      "opening_tendencies": [
+        "thesis_led",
+        "quote_or_insight_led"
+      ],
+      "rhythm": "open prose-led movement with deliberate visual pauses",
+      "density": "low_to_medium",
+      "transition_tendencies": [
+        "chapter-like turns",
+        "pull insight into whitespace rather than another panel"
+      ],
+      "family_affinity": [
+        "hero",
+        "summary",
+        "narrative",
+        "metric"
+      ],
+      "avoid": [
+        "panelizing every paragraph",
+        "fixed magazine templates"
+      ]
+    },
+    {
+      "id": "evidence-led",
+      "opening_tendencies": [
+        "scope_and_confidence_first",
+        "finding_first_when_actionable"
+      ],
+      "rhythm": "claim → source → assessment → implication",
+      "density": "medium_high_with_reading_breaks",
+      "transition_tendencies": [
+        "show provenance at each evidence turn",
+        "separate observed from inferred"
+      ],
+      "family_affinity": [
+        "evidence",
+        "timeline",
+        "risk",
+        "technical"
+      ],
+      "avoid": [
+        "turning every narrative into a table",
+        "hiding unknowns"
+      ]
+    },
+    {
+      "id": "decision-led",
+      "opening_tendencies": [
+        "decision_question",
+        "recommendation_with_condition"
+      ],
+      "rhythm": "decision → options → trade-offs → gate",
+      "density": "medium",
+      "transition_tendencies": [
+        "make option changes explicit",
+        "end on an actionable gate"
+      ],
+      "family_affinity": [
+        "decision",
+        "comparison",
+        "risk",
+        "summary"
+      ],
+      "avoid": [
+        "burying the decision",
+        "presenting unsupported certainty"
+      ]
+    },
+    {
+      "id": "technical",
+      "opening_tendencies": [
+        "system_purpose",
+        "interface_or_failure_question"
+      ],
+      "rhythm": "context → interface/detail → runtime consequence",
+      "density": "medium_high_when_needed",
+      "transition_tendencies": [
+        "move from overview to traceable detail",
+        "keep identifiers adjacent to claims"
+      ],
+      "family_affinity": [
+        "technical",
+        "architecture",
+        "process",
+        "evidence"
+      ],
+      "avoid": [
+        "decorative code blocks",
+        "advanced tools without benefit"
+      ]
+    },
+    {
+      "id": "architecture-led",
+      "opening_tendencies": [
+        "system_context",
+        "trust_or_ownership_boundary"
+      ],
+      "rhythm": "context → boundaries → flows/lifecycle → unresolved questions",
+      "density": "medium_high_structured",
+      "transition_tendencies": [
+        "follow causal or dependency direction",
+        "label current and proposed states separately"
+      ],
+      "family_affinity": [
+        "architecture",
+        "process",
+        "technical",
+        "risk"
+      ],
+      "avoid": [
+        "fake topology",
+        "graph-only decoration",
+        "unlabeled arrows"
+      ]
+    },
+    {
+      "id": "operational",
+      "opening_tendencies": [
+        "current_state",
+        "next_action_or_owner"
+      ],
+      "rhythm": "state → ownership → next action → escalation",
+      "density": "medium_compact",
+      "transition_tendencies": [
+        "keep handoffs and dependencies visible",
+        "distinguish done from pending"
+      ],
+      "family_affinity": [
+        "operational",
+        "process",
+        "metric",
+        "timeline"
+      ],
+      "avoid": [
+        "ambiguous ownership",
+        "decorative status colors"
+      ]
+    },
+    {
+      "id": "narrative",
+      "opening_tendencies": [
+        "human_context",
+        "turning_point_or_insight"
+      ],
+      "rhythm": "context → tension → insight → consequence",
+      "density": "low_to_medium",
+      "transition_tendencies": [
+        "use whitespace for narrative turns",
+        "bring supporting evidence beside the relevant passage"
+      ],
+      "family_affinity": [
+        "narrative",
+        "summary",
+        "media",
+        "decision"
+      ],
+      "avoid": [
+        "invented drama",
+        "isolated evidence detached from the story"
+      ]
+    },
+    {
+      "id": "data-first",
+      "opening_tendencies": [
+        "decision_relevant_measure",
+        "baseline_or_delta"
+      ],
+      "rhythm": "measure → comparison → interpretation → implication",
+      "density": "medium_with_clear_units",
+      "transition_tendencies": [
+        "move from values to meaning",
+        "keep source and time basis visible"
+      ],
+      "family_affinity": [
+        "metric",
+        "comparison",
+        "financial",
+        "risk"
+      ],
+      "avoid": [
+        "orphan metrics",
+        "fake precision",
+        "chart without a question"
+      ]
+    },
+    {
+      "id": "investigative",
+      "opening_tendencies": [
+        "investigation_question",
+        "most_material_finding"
+      ],
+      "rhythm": "question → observations → contradictions → findings",
+      "density": "medium_high_with_uncertainty_markers",
+      "transition_tendencies": [
+        "preserve source sequence where material",
+        "surface contradiction before conclusion"
+      ],
+      "family_affinity": [
+        "evidence",
+        "timeline",
+        "technical",
+        "risk"
+      ],
+      "avoid": [
+        "collapsing evidence and interpretation",
+        "concealing gaps"
+      ]
+    },
+    {
+      "id": "hybrid",
+      "opening_tendencies": [
+        "strongest_audience_relevant_entry",
+        "decision_or_narrative_first"
+      ],
+      "rhythm": "alternate exposition and structured evidence according to content",
+      "density": "variable_by_information_role",
+      "transition_tendencies": [
+        "change form only when the information role changes",
+        "make section rhythm feel authored"
+      ],
+      "family_affinity": [
+        "hero",
+        "summary",
+        "decision",
+        "narrative",
+        "evidence"
+      ],
+      "avoid": [
+        "indistinct section roles",
+        "variety for novelty alone"
+      ]
+    }
   ],
-  "role": "Rhythm strategies, not templates."
+  "role": "Rhythm strategies, not templates; guidance does not prescribe fixed layouts."
 }
