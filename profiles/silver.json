@@ -1,0 +1,41 @@
+{
+  "id": "silver",
+  "character": "Precise, cool, serious, analytical, evidence authority that stays dense-but-readable.",
+  "gradient_grammar": {
+    "brand": "Steel → Cool Blue → Cyan",
+    "brand_field": "Steel → Cool Blue → Cyan",
+    "hero_field": "Cool Blue depth with restrained Cyan signal",
+    "surface_glow": "Cool, restrained surfaces",
+    "focus": "Steel → Cool Blue → Cyan",
+    "data": "Steel → Cool Blue → Cyan",
+    "motion": "Low motion",
+    "status_accents": "Cyan as evidence/validation signal",
+    "human_authority": "Founder Sand used sparingly as an authority marker"
+  },
+  "token_semantics": {
+    "steel": "Analytical structure and boundary clarity.",
+    "cool_blue": "Evidence depth and continuity.",
+    "cyan": "Evidence and validation signal.",
+    "founder_sand": "Rare human authority marker."
+  },
+  "density": "compact, dense-but-readable, tighter spacing than Prime",
+  "motion_budget": "low",
+  "composition_affinity": [
+    "evidence-led",
+    "investigative",
+    "data-first",
+    "decision-led"
+  ],
+  "representation_affinity": [
+    "claim → evidence",
+    "evidence ledger",
+    "evidence timeline",
+    "source matrix"
+  ],
+  "anti_patterns": [
+    "turning every section into a table",
+    "removing narrative where narrative is clearer",
+    "visually flattening important decisions",
+    "spreadsheet aesthetics as default"
+  ]
+}

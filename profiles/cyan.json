@@ -1,0 +1,42 @@
+{
+  "id": "cyan",
+  "character": "Technical systems intelligence: structural, dynamic, precise, and modern.",
+  "gradient_grammar": {
+    "brand": "Cyan → Electric Blue → Deep Navy",
+    "brand_field": "Cyan → Electric Blue → Deep Navy",
+    "hero_field": "Cyan atmosphere over Deep Navy structure",
+    "surface_glow": "Cool Cyan/Blue system depth",
+    "focus": "Cyan → Electric Blue → Deep Navy",
+    "data": "Cyan → Electric Blue → Deep Navy",
+    "motion": "Cyan → Electric Blue → Deep Navy when motion aids comprehension",
+    "status_accents": "Cyan as primary systems-intelligence accent",
+    "human_authority": "Founder Sand rare, reserved for human/approval markers"
+  },
+  "token_semantics": {
+    "cyan": "Primary systems-intelligence accent.",
+    "electric_blue": "System structure and active flow.",
+    "deep_navy": "Runtime depth and continuity.",
+    "founder_sand": "Rare human or approval marker."
+  },
+  "density": "medium to high, following information needs",
+  "motion_budget": "medium to high when it aids comprehension",
+  "composition_affinity": [
+    "technical",
+    "architecture-led",
+    "operational",
+    "data-first"
+  ],
+  "representation_affinity": [
+    "layered architecture",
+    "control plane",
+    "data flow",
+    "linear pipeline",
+    "execution trace"
+  ],
+  "anti_patterns": [
+    "fake sci-fi HUD",
+    "neon overload",
+    "decorative technical diagrams",
+    "advanced libraries used only because they exist"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "default": "HTML/CSS",
+  "capabilities": {
+    "HTML/CSS": {"optional": false, "guidance": "Default for static layouts."},
+    "SVG": {"optional": true, "guidance": "Use for scalable diagrams and structured vector visuals."},
+    "Canvas": {"optional": true, "guidance": "Use for atmospheric, particle, or continuous visual scenes."},
+    "D3": {"optional": true, "guidance": "Use for real data visualizations or bespoke data-driven layouts."},
+    "React": {"optional": true, "guidance": "Use for meaningful stateful interaction, filtering, or views."},
+    "Astro": {"optional": true, "guidance": "Use when multi-file structure or component build ergonomics are justified."}
+  }
+}

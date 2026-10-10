@@ -1,0 +1,10 @@
+{
+  "recommendation_only": true,
+  "purpose": "Use audience and content type to recommend one profile; wait for Founder choice only when the request did not specify a profile.",
+  "profiles": [
+    {"id": "prime", "best_for": ["mixed technical/executive", "founder", "strategy", "product"], "character": "balanced OMEGA signature"},
+    {"id": "gold", "best_for": ["board", "CEO", "investor", "leadership", "client", "commercial"], "character": "executive/editorial hybrid"},
+    {"id": "silver", "best_for": ["audit", "research", "investigation", "due diligence", "evidence", "postmortem", "compliance"], "character": "analytical evidence authority"},
+    {"id": "cyan", "best_for": ["architecture", "engineering", "runtime", "operations", "infrastructure", "APIs", "agents", "pipelines"], "character": "technical systems intelligence"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "archetypes": [
+    "executive",
+    "editorial",
+    "evidence-led",
+    "decision-led",
+    "technical",
+    "architecture-led",
+    "operational",
+    "narrative",
+    "data-first",
+    "investigative",
+    "hybrid"
+  ],
+  "role": "Rhythm strategies, not templates."
+}

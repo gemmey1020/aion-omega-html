@@ -1,0 +1,42 @@
+{
+  "id": "gold",
+  "character": "Executive authority with an editorial/cinematic hybrid personality when earned.",
+  "gradient_grammar": {
+    "brand": "Founder Sand → Warm Gold → Deep Blue",
+    "brand_field": "Founder Sand → Warm Gold → Deep Blue",
+    "hero_field": "Founder Sand warmth with Deep Blue depth",
+    "surface_glow": "Warm Sand/Gold, restrained",
+    "focus": "Founder Sand → Warm Gold → Deep Blue",
+    "data": "Founder Sand → Warm Gold → Deep Blue",
+    "motion": "Restrained warm-to-blue transitions",
+    "status_accents": "Cyan only as a restrained technical/cognitive signal",
+    "human_authority": "Primary executive warmth"
+  },
+  "token_semantics": {
+    "founder_sand": "Primary executive warmth and authority.",
+    "warm_gold": "Executive emphasis and decision weight.",
+    "cyan": "Restrained technical/cognitive signal."
+  },
+  "density": "medium-low with more whitespace and lower simultaneous visual noise",
+  "motion_budget": "low to medium, restrained",
+  "composition_affinity": [
+    "executive",
+    "editorial",
+    "decision-led",
+    "narrative"
+  ],
+  "representation_affinity": [
+    "executive verdict",
+    "recommendation statement",
+    "investment case",
+    "weighted criteria"
+  ],
+  "anti_patterns": [
+    "casino gold",
+    "luxury cliché",
+    "excessive serif",
+    "dashboard clutter",
+    "repeated dense cards",
+    "gratuitous motion"
+  ]
+}

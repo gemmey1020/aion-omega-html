@@ -1,0 +1,40 @@
+{
+  "id": "prime",
+  "character": "Balanced, intelligent, quiet premium, human + technical.",
+  "seed_reference": "references/founder-approved/PRIME_SEED.html",
+  "gradient_grammar": {
+    "brand": "Cyan → Electric Blue → Founder Sand",
+    "brand_field": "Cyan atmosphere + Blue depth + Sand warmth",
+    "hero_field": "Cyan atmosphere + Blue depth + Sand warmth",
+    "surface_glow": "Subtle Blue/Sand",
+    "focus": "Cyan → Electric Blue → Founder Sand",
+    "data": "Cyan → Electric Blue → Founder Sand",
+    "motion": "Cyan → Electric Blue → Founder Sand",
+    "status_accents": "Cyan cognition/evidence signal",
+    "human_authority": "Balanced Founder Sand warmth"
+  },
+  "token_semantics": {
+    "founder_sand": "Human authority, founder-level weight, brand warmth.",
+    "cyan": "Cognition, evidence signal, active intelligence.",
+    "blue": "System structure, depth, continuity."
+  },
+  "density": "medium",
+  "motion_budget": "medium",
+  "composition_affinity": [
+    "hybrid",
+    "executive",
+    "editorial",
+    "narrative"
+  ],
+  "representation_affinity": [
+    "particle signature",
+    "executive snapshot",
+    "KPI strip"
+  ],
+  "anti_patterns": [
+    "generic neon sci-fi HUD",
+    "generic SaaS card spam",
+    "mandatory giant hero",
+    "mandatory dashboard structure"
+  ]
+}

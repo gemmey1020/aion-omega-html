@@ -1,0 +1,12 @@
+{
+  "anti_patterns": [
+    {"id": "card-spam", "failure": "Repeated cards flatten hierarchy and create generic SaaS feeling.", "repair": "Vary section grammar and use open composition where it serves the content."},
+    {"id": "giant-hero-abuse", "failure": "A large opening delays the report's purpose and key information.", "repair": "Use a compact or no-hero opening when the content does not earn a large one."},
+    {"id": "fake-dashboard", "failure": "Dashboard structure adds panels without improving understanding.", "repair": "Choose a composition that follows the information roles and audience."},
+    {"id": "neon-overload", "failure": "Excessive neon weakens readability and restraint.", "repair": "Use profile accents as information signals over dark surfaces."},
+    {"id": "repeated-3-column-layout", "failure": "Repeating the same grid creates predictable rhythm and template feel.", "repair": "Change the reading grammar where another representation fits better."},
+    {"id": "weak-hierarchy", "failure": "The audience cannot quickly identify the purpose, decision, or evidence.", "repair": "Strengthen hierarchy around meaning and the intended action."},
+    {"id": "decorative-graph", "failure": "A technical visual that carries no information is decoration.", "repair": "Use a diagram only when its structure communicates source-backed information."},
+    {"id": "mobile-hero-disaster", "failure": "The mobile opening consumes the screen or clips critical content.", "repair": "Inspect the 390px view and reduce opening height or change its composition."}
+  ]
+}
