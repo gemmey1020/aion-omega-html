@@ -1,0 +1,43 @@
+{
+  "family": "hero",
+  "roles": [
+    "opening",
+    "summary"
+  ],
+  "best_for": [
+    "signature opening with a clear evidence signal"
+  ],
+  "avoid_when": [
+    "the document must begin with a compact title or dense table"
+  ],
+  "density": "medium",
+  "motion": "low",
+  "profiles": [
+    "prime"
+  ],
+  "audiences": [
+    "founder",
+    "mixed"
+  ],
+  "keywords": [
+    "particle",
+    "signature",
+    "pilot",
+    "signal"
+  ],
+  "capabilities": [
+    "HTML/CSS",
+    "SVG"
+  ],
+  "variant_axes": [
+    "particle density",
+    "cluster position",
+    "headline scale",
+    "accent balance"
+  ],
+  "id": "hero.particle-signature",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "prime"
+  ]
+}

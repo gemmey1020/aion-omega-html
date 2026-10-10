@@ -1,0 +1,48 @@
+{
+  "family": "summary",
+  "roles": [
+    "situation",
+    "implication",
+    "action"
+  ],
+  "best_for": [
+    "briefs that need a direct logic chain from facts to action"
+  ],
+  "avoid_when": [
+    "a visual comparison or multi-claim evidence register is clearer"
+  ],
+  "density": "compact",
+  "motion": "none",
+  "profiles": [
+    "prime",
+    "silver",
+    "gold"
+  ],
+  "audiences": [
+    "management",
+    "operations",
+    "founder"
+  ],
+  "keywords": [
+    "situation",
+    "implication",
+    "action",
+    "summary"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "row labels",
+    "order",
+    "supporting evidence",
+    "action emphasis"
+  ],
+  "id": "summary.situation-implication-action",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "prime",
+    "silver",
+    "gold"
+  ]
+}

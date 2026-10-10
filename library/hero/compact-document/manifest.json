@@ -1,0 +1,45 @@
+{
+  "family": "hero",
+  "roles": [
+    "opening",
+    "document title"
+  ],
+  "best_for": [
+    "short report where purpose and status should appear immediately"
+  ],
+  "avoid_when": [
+    "the report needs a signature scene or visual opening"
+  ],
+  "density": "compact",
+  "motion": "none",
+  "profiles": [
+    "prime",
+    "silver"
+  ],
+  "audiences": [
+    "founder",
+    "technical",
+    "management"
+  ],
+  "keywords": [
+    "compact",
+    "document",
+    "status",
+    "title"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "metadata position",
+    "title width",
+    "status placement",
+    "intro length"
+  ],
+  "id": "hero.compact-document",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "prime",
+    "silver"
+  ]
+}

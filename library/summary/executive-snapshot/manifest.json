@@ -1,0 +1,45 @@
+{
+  "family": "summary",
+  "roles": [
+    "executive summary",
+    "metrics"
+  ],
+  "best_for": [
+    "fast executive scan with a recommendation and a few decision-relevant signals"
+  ],
+  "avoid_when": [
+    "the report depends on a detailed evidence trail"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "founder"
+  ],
+  "keywords": [
+    "executive",
+    "snapshot",
+    "metrics",
+    "recommendation"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "metric count",
+    "recommendation placement",
+    "context line",
+    "density"
+  ],
+  "id": "summary.executive-snapshot",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ]
+}

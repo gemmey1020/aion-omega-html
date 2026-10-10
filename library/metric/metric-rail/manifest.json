@@ -1,0 +1,48 @@
+{
+  "family": "metric",
+  "roles": [
+    "quantitative distribution",
+    "progress"
+  ],
+  "best_for": [
+    "showing composition of a small count where categories sum to a total"
+  ],
+  "avoid_when": [
+    "values need a time axis or confidence interval"
+  ],
+  "density": "compact",
+  "motion": "none",
+  "profiles": [
+    "silver",
+    "cyan",
+    "prime"
+  ],
+  "audiences": [
+    "technical",
+    "management",
+    "founder"
+  ],
+  "keywords": [
+    "metric",
+    "rail",
+    "distribution",
+    "count"
+  ],
+  "capabilities": [
+    "HTML/CSS",
+    "SVG"
+  ],
+  "variant_axes": [
+    "segment count",
+    "category labels",
+    "orientation",
+    "total placement"
+  ],
+  "id": "metric.metric-rail",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "silver",
+    "cyan",
+    "prime"
+  ]
+}

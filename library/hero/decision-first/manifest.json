@@ -1,0 +1,45 @@
+{
+  "family": "hero",
+  "roles": [
+    "opening",
+    "decision"
+  ],
+  "best_for": [
+    "decision requests where the audience should see the conditional verdict first"
+  ],
+  "avoid_when": [
+    "the source is too uncertain to support a recommendation"
+  ],
+  "density": "medium",
+  "motion": "low",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "founder"
+  ],
+  "keywords": [
+    "decision",
+    "verdict",
+    "conditional",
+    "launch"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "verdict wording",
+    "condition prominence",
+    "branch count",
+    "evidence placement"
+  ],
+  "id": "hero.decision-first",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ]
+}

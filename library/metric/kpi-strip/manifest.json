@@ -1,0 +1,47 @@
+{
+  "family": "metric",
+  "roles": [
+    "quantitative summary",
+    "KPI comparison"
+  ],
+  "best_for": [
+    "a small set of comparable measures that should be scanned in one line"
+  ],
+  "avoid_when": [
+    "the audience needs trend history or uncertainty ranges"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profiles": [
+    "prime",
+    "gold",
+    "silver"
+  ],
+  "audiences": [
+    "executive",
+    "management",
+    "founder"
+  ],
+  "keywords": [
+    "KPI",
+    "strip",
+    "count",
+    "pilot"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "metric count",
+    "label length",
+    "delta display",
+    "strip direction"
+  ],
+  "id": "metric.kpi-strip",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "prime",
+    "gold",
+    "silver"
+  ]
+}

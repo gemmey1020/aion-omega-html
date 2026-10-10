@@ -1,0 +1,45 @@
+{
+  "family": "hero",
+  "roles": [
+    "opening",
+    "thesis"
+  ],
+  "best_for": [
+    "reports led by a clear thesis with a contrasting annotation"
+  ],
+  "avoid_when": [
+    "the audience needs an immediate dense evidence table"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "editorial",
+    "split",
+    "thesis",
+    "opening"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "column ratio",
+    "thesis length",
+    "annotation emphasis",
+    "rule placement"
+  ],
+  "id": "hero.editorial-split",
+  "reference": "reference.html",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ]
+}
