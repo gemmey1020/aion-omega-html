@@ -1,0 +1,7 @@
+{
+  "skill": "aion-omega-html",
+  "version": "0.1.0-pov",
+  "architecture_spec": "1.0",
+  "corpus_target": 27,
+  "checkpoint": "early-real-world-pov"
+}
