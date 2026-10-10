@@ -23,14 +23,19 @@ def search_catalog(
     audiences: Iterable[str] | str | None = None,
     keywords: Iterable[str] | str | None = None,
     limit: int = 12,
+    include_borrowed: bool = False,
+    borrow_limit: int = 3,
 ) -> list[dict]:
     """Return ranked catalog records; this helper does not select a design."""
     if limit < 0:
         raise ValueError("limit must be zero or greater")
+    if borrow_limit < 0:
+        raise ValueError("borrow_limit must be zero or greater")
     requested_profiles = _terms(profiles)
     requested_roles = _terms(roles)
     requested_audiences = _terms(audiences)
     requested_keywords = _terms(keywords)
+    has_semantic_query = bool(requested_roles or requested_audiences or requested_keywords)
 
     rows = []
     path = Path(catalog_path)
@@ -45,24 +50,46 @@ def search_catalog(
             raise ValueError(f"catalog entry must be an object at {path}:{line_number}")
         rows.append(row)
 
-    ranked = []
+    native_ranked = []
+    borrowed_ranked = []
     for row in rows:
         row_profiles = _terms(row.get("profiles", []))
         profile_match = bool(requested_profiles & row_profiles)
-        if requested_profiles and not profile_match:
+        if requested_profiles and not profile_match and not include_borrowed:
             continue
 
         role_matches = requested_roles & _terms(row.get("roles", []))
         audience_matches = requested_audiences & _terms(row.get("audiences", []))
         keyword_matches = requested_keywords & _terms(row.get("keywords", []))
-        score = 4 * len(role_matches)
-        score += 3 if profile_match else 0
-        score += 2 * len(audience_matches)
-        score += len(keyword_matches)
-        ranked.append((score, str(row.get("id", "")), row))
+        semantic_score = 4 * len(role_matches)
+        semantic_score += 2 * len(audience_matches)
+        semantic_score += len(keyword_matches)
+        if has_semantic_query and semantic_score == 0:
+            continue
 
-    ranked.sort(key=lambda item: (-item[0], item[1]))
-    return [dict(row, score=score) for score, _, row in ranked[:limit]]
+        match_scope = "native" if not requested_profiles or profile_match else "borrowed"
+        score = semantic_score + (3 if profile_match else 0)
+        result = dict(
+            row,
+            score=score,
+            semantic_score=semantic_score,
+            match_scope=match_scope,
+        )
+        ranked_row = (score, str(row.get("id", "")), result)
+        if match_scope == "native":
+            native_ranked.append(ranked_row)
+        else:
+            borrowed_ranked.append(ranked_row)
+
+    sort_key = lambda item: (-item[0], item[1])
+    native_ranked.sort(key=sort_key)
+    borrowed_ranked.sort(key=sort_key)
+    native_results = [row for _, _, row in native_ranked]
+    if requested_profiles and include_borrowed:
+        borrowed_results = [row for _, _, row in borrowed_ranked[:borrow_limit]]
+    else:
+        borrowed_results = []
+    return (native_results + borrowed_results)[:limit]
 
 
 def _csv(value: str | None) -> list[str]:
@@ -77,9 +104,13 @@ def main(argv=None) -> int:
     parser.add_argument("--audiences", help="Comma-separated audience labels")
     parser.add_argument("--keywords", help="Comma-separated keywords")
     parser.add_argument("--limit", type=int, default=12)
+    parser.add_argument("--include-borrowed", action="store_true")
+    parser.add_argument("--borrow-limit", type=int, default=3)
     args = parser.parse_args(argv)
     if args.limit < 0:
         parser.error("--limit must be zero or greater")
+    if args.borrow_limit < 0:
+        parser.error("--borrow-limit must be zero or greater")
     try:
         results = search_catalog(
             args.catalog,
@@ -88,6 +119,8 @@ def main(argv=None) -> int:
             audiences=_csv(args.audiences),
             keywords=_csv(args.keywords),
             limit=args.limit,
+            include_borrowed=args.include_borrowed,
+            borrow_limit=args.borrow_limit,
         )
     except (OSError, ValueError) as exc:
         print(str(exc), file=sys.stderr)
