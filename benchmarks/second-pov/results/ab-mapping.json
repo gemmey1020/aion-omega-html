@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "status": "precommitted answer key; do not include in scorecards",
+  "assignment": {
+    "01-board-decision": "A",
+    "02-founder-strategy": "B",
+    "03-incident-audit": "B",
+    "04-system-architecture": "B",
+    "05-operations-handoff": "A",
+    "06-client-proposal": "A"
+  }
+}
