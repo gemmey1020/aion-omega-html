@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Weekly Operations Status · Week ending 18 October</title>
+<style>
+:root{color-scheme:dark;--bg:#07131c;--panel:#0d202b;--line:#24404d;--text:#e7f1f3;--muted:#9bb0b8;--cyan:#55d7df;--blue:#3295c7;--sand:#d3bb91;--hold:#718894;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--sans:system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 78% 0%,#123448 0,transparent 42%),var(--bg);color:var(--text);font:15px/1.65 var(--sans)}main{width:min(1040px,calc(100% - 36px));margin:36px auto 48px}.eyebrow{display:flex;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line);padding:0 0 12px;color:var(--muted);font:11px var(--mono);letter-spacing:.04em}.hero{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:27px 0 20px}.hero h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 8px}.hero p{margin:0;color:var(--muted)}.review{flex:none;border:1px solid var(--line);background:#0a1b25;padding:10px 14px;border-radius:7px;color:var(--muted);font-size:12px}.review b{display:block;color:var(--text);font:700 14px var(--mono);margin-top:2px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{background:linear-gradient(145deg,#102632,#0b1b24);border:1px solid var(--line);border-radius:8px;padding:15px 16px;min-height:100px}.metric .num{font:700 27px/1.2 var(--mono);color:var(--cyan)}.metric .label{font-size:12px;color:var(--muted);margin-top:7px}.distribution{margin-top:16px;border:1px solid var(--line);background:#0a1a23;border-radius:8px;padding:17px 18px}.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:13px}.section-head h2,.panel h2{font-size:15px;margin:0}.section-head span{font:10px var(--mono);color:var(--muted)}.rail{display:grid;grid-template-columns:repeat(40,1fr);gap:4px;direction:ltr}.rail i{height:15px;border-radius:2px;background:linear-gradient(180deg,#49cbd3,#17677b);border:1px solid #4aa6b3}.rail i.delayed{background:#465d68;border-color:#788d96}.rail i.blocked{background:#806d4e;border-color:#c1a875}.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:12px;color:var(--muted);font-size:11px}.legend span{display:inline-flex;align-items:center;gap:7px}.key{width:9px;height:9px;border-radius:2px;background:var(--cyan)}.key.delay{background:#718894}.key.block{background:var(--sand)}.columns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.panel{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:17px 18px}.panel h2{margin-bottom:12px}.review-split{display:flex;gap:10px}.review-split div{flex:1;border-left:2px solid var(--cyan);padding:8px 10px;background:#0a1a23;border-radius:0 5px 5px 0}.review-split div:last-child{border-color:var(--sand)}.review-split b{font:700 20px var(--mono);display:block}.review-split small{color:var(--muted)}ul{margin:0;padding-left:19px}li{padding:0 0 9px;color:#c5d4d8}li:last-child{padding-bottom:0}li b{color:var(--text)}.due{color:var(--sand)}.note{margin-top:12px;border-right:2px solid var(--blue);padding:9px 13px;color:#c0d0d4;background:#0b1c25;border-radius:0 6px 6px 0;font-size:13px}.note-label{display:block;color:var(--muted);font:10px var(--mono);margin-bottom:3px}.statusline{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:13px;padding:12px 15px;border:1px solid #3b5260;border-radius:7px;background:#101f28}.statusline strong{color:var(--text)}.statusline span{color:var(--muted);font-size:12px}.foot{margin-top:14px;color:#8198a1;font:10px var(--mono)}
+@media(max-width:680px){main{margin:20px auto 30px}.eyebrow{font-size:9px}.hero{align-items:flex-start;flex-direction:column;gap:13px;margin-top:20px}.metrics{grid-template-columns:repeat(2,1fr)}.metric{min-height:87px;padding:12px}.metric .num{font-size:23px}.distribution{padding:14px 12px}.rail{gap:2px}.rail i{height:12px}.columns{grid-template-columns:1fr}.review-split{gap:7px}.panel{padding:15px}.statusline{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow"><span>OPERATIONS / WEEKLY STATUS</span><span>WEEK ENDING 18 OCTOBER</span></div>
+  <header class="hero">
+    <div><h1>Customer setup: weekly review</h1><p>Throughput, open work, and actions requiring confirmation</p></div>
+    <div class="review">SERVICE REVIEW<b>21 OCTOBER</b></div>
+  </header>
+
+  <section class="metrics" aria-label="Weekly task counts">
+    <article class="metric"><div class="num">34 / 40</div><div class="label">scheduled setup tasks closed</div></article>
+    <article class="metric"><div class="num">4</div><div class="label">moved to next week · late source records</div></article>
+    <article class="metric"><div class="num">2</div><div class="label">blocked · mapping decision has no accepted internal owner</div></article>
+    <article class="metric"><div class="num">0</div><div class="label">tasks abandoned</div></article>
+  </section>
+
+  <section class="distribution" aria-labelledby="distribution-title">
+    <div class="section-head"><h2 id="distribution-title">Scheduled task disposition</h2><span>40 TASKS · COUNTS AS REPORTED</span></div>
+    <div class="rail" role="img" aria-label="Of 40 scheduled tasks, 34 closed, 4 moved to next week, and 2 remain blocked.">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i class="delayed"></i><i class="delayed"></i><i class="delayed"></i><i class="delayed"></i><i class="blocked"></i><i class="blocked"></i>
+    </div>
+    <div class="legend"><span><i class="key"></i>34 closed</span><span><i class="key delay"></i>4 moved to next week</span><span><i class="key block"></i>2 blocked</span></div>
+  </section>
+
+  <div class="columns">
+    <section class="panel">
+      <h2>Closure review · 34 closed tasks</h2>
+      <div class="review-split"><div><b>30</b><small>passed first review</small></div><div><b>4</b><small>required correction before closure</small></div></div>
+      <div class="note"><span class="note-label">MANAGER WORKING NOTE</span><bdi lang="ar" dir="rtl">اتقفل 34 من 40. الأربعة اتأجلوا بسبب تأخر source records، والاتنين blocked لحد ما يبقى فيه owner واضح للـ mapping. هنراجعهم الخميس.</bdi></div>
+    </section>
+    <section class="panel">
+      <h2>Actions and ownership</h2>
+      <ul>
+        <li><b>Proposed:</b> assign an internal source-record owner at intake.</li>
+        <li><b>Proposed:</b> review blocked mappings every Thursday.</li>
+        <li><b>Onboarding lead — not yet named:</b> confirm whether the intake form can add the new owner field <span class="due">before 24 October</span>.</li>
+        <li><b>Operations:</b> verify revised customer dates for the four late-record tasks. <span class="due">No revised dates are recorded yet.</span></li>
+      </ul>
+    </section>
+  </div>
+  <div class="statusline"><strong>No SLA breach has been confirmed.</strong><span>Open work is reported as delayed or blocked; no overdue status is established here.</span></div>
+  <div class="foot">SOURCE: FICTIONAL BENCHMARK CASE · WEEK ENDING 18 OCTOBER</div>
+</main>
+</body>
+</html>

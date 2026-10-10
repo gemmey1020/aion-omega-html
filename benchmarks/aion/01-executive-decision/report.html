@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Launch decision | Board brief</title>
+<style>
+:root{color-scheme:dark;--bg:#101518;--panel:#171f21;--panel2:#1d2423;--ink:#f0eee8;--muted:#b7bfbb;--line:#394443;--sand:#e8d6ad;--gold:#d7b96f;--cyan:#8cbfc0;--red:#d99a86;--green:#9ac4a7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 78% 0%,#302d24 0%,#161b1b 34%,var(--bg) 70%);color:var(--ink);font:16px/1.58 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:1080px;margin:auto;padding:38px 34px 64px}.mast{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;color:#bbc0b7;font-size:11px;letter-spacing:.14em;text-transform:uppercase}.mast span:last-child{text-align:right}header{padding:46px 0 22px}.kicker{color:var(--gold);font-size:12px;letter-spacing:.13em;text-transform:uppercase}h1{font-size:clamp(34px,5.4vw,58px);line-height:1.05;letter-spacing:-.04em;max-width:850px;margin:12px 0 14px}header p{max-width:740px;color:var(--muted);font-size:17px;margin:0}.decision{border:1px solid #746641;background:linear-gradient(110deg,#282820,#1c2220 70%);padding:24px 28px;margin:16px 0 32px;position:relative}.decision:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(var(--gold),var(--sand))}.decision .label{font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.13em}.decision h2{font-size:clamp(21px,3vw,30px);line-height:1.2;margin:8px 0}.decision p{color:#d1d2ca;margin:0;max-width:850px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin:28px 0 36px}.section-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:12px}.section-head h2{font-size:18px;margin:0}.section-head span{font-size:11px;color:var(--muted);letter-spacing:.09em;text-transform:uppercase}.option{padding:16px 18px;background:var(--panel);border-top:2px solid #67716b;margin-bottom:10px}.option.recommended{border-color:var(--gold);background:var(--panel2)}.option .tag{font-size:10px;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}.option h3{font-size:17px;margin:5px 0}.option p{font-size:14px;color:#c4cbc5;margin:0}.option .trade{border-top:1px solid #3d4742;margin-top:12px;padding-top:9px;color:var(--sand);font-size:13px}.facts{list-style:none;padding:0;margin:0}.facts li{border-bottom:1px solid #303a39;padding:12px 0;display:grid;grid-template-columns:105px 1fr;gap:12px}.facts li:last-child{border-bottom:0}.facts b{font-size:11px;color:var(--cyan);letter-spacing:.08em;text-transform:uppercase}.facts span{font-size:14px;color:#d4d9d3}.gate{border:1px solid #4c5550;padding:22px 24px;margin:24px 0 30px;background:#151c1c}.gate>h2{font-size:19px;margin:0 0 15px}.branches{display:grid;grid-template-columns:1fr 1fr;gap:14px}.branch{padding:16px;background:#1a2221;border-top:2px solid var(--green)}.branch.hold{border-color:var(--gold)}.branch b{font-size:11px;letter-spacing:.1em;color:var(--green);text-transform:uppercase}.branch.hold b{color:var(--gold)}.branch h3{font-size:16px;margin:5px 0}.branch p{font-size:14px;color:#c4cbc5;margin:0}.limit{border-left:2px solid var(--red);padding:10px 14px;color:#d3c8c1;background:#211d1b;margin-top:14px;font-size:13px}.foot{border-top:1px solid var(--line);padding-top:14px;color:#9fa9a4;font-size:11px;display:flex;justify-content:space-between;gap:14px}.foot strong{color:var(--sand);font-weight:500}@media(max-width:700px){main{padding:23px 18px 42px}.mast{font-size:9px;letter-spacing:.09em}header{padding:34px 0 14px}header p{font-size:15px}.decision{padding:19px 19px 19px 22px}.grid{grid-template-columns:1fr;gap:21px;margin:22px 0 28px}.branches{grid-template-columns:1fr}.facts li{grid-template-columns:84px 1fr;gap:8px}.foot{display:block}.foot span{display:block;margin:4px 0}}
+</style>
+</head>
+<body>
+<main>
+  <div class="mast"><span>AION · Board decision brief</span><span>Launch readiness / 01 November</span></div>
+  <header>
+    <div class="kicker">Recommendation · conditional</div>
+    <h1>Protect the launch decision with one more regression cycle.</h1>
+    <p>The reliability signal is material, while the date carries a customer contract. Seek approval for a two-week delay; if the customer does not approve, use the constrained cohort path with its operating control and known residual defect.</p>
+  </header>
+  <section class="decision" aria-labelledby="verdict">
+    <div class="label">Board recommendation</div>
+    <h2 id="verdict">Request a two-week delay, subject to customer approval.</h2>
+    <p>This judgment gives the team another full regression cycle against an unresolved reliability issue. The account lead has not confirmed customer acceptance, so the delay is not yet secured. If approval is declined, the fallback is a constrained launch for the existing customer cohort with staffed manual review of every flagged order.</p>
+  </section>
+  <div class="grid">
+    <section aria-labelledby="evidence-title">
+      <div class="section-head"><h2 id="evidence-title">Evidence in hand</h2><span>Supplied facts</span></div>
+      <ul class="facts">
+        <li><b>Exercise</b><span>7 of 40 scripted checkout runs ended in a retry or timeout.</span></li>
+        <li><b>Scope</b><span>Failures appeared in two test regions; a single root cause has not been established.</span></li>
+        <li><b>Production</b><span>No production customer has been exposed to the defect, and no production payment data is affected.</span></li>
+        <li><b>Control</b><span>Engineering says manual review can reduce exposure but cannot eliminate the reliability defect.</span></li>
+        <li><b>Contract</b><span>The date matters contractually; customer acceptance of a delay is unconfirmed.</span></li>
+      </ul>
+    </section>
+    <section aria-labelledby="paths-title">
+      <div class="section-head"><h2 id="paths-title">Two available paths</h2><span>Judgment on trade-offs</span></div>
+      <article class="option recommended">
+        <div class="tag">Preferred · if approved</div>
+        <h3>Delay by two weeks</h3>
+        <p>Allows another full regression cycle before launch.</p>
+        <div class="trade">Condition: the customer must approve a revised date.</div>
+      </article>
+      <article class="option">
+        <div class="tag">Fallback · if delay is not approved</div>
+        <h3>Constrained existing-customer cohort</h3>
+        <p>Staff manual review of every flagged order while engineering continues the fix.</p>
+        <div class="trade">Operating estimate: two additional operations shifts each day for the first week. The defect remains.</div>
+      </article>
+    </section>
+  </div>
+  <section class="gate" aria-labelledby="gate-title">
+    <h2 id="gate-title">Decision gate · what changes the recommendation</h2>
+    <div class="branches">
+      <article class="branch">
+        <b>Customer approves revised date</b>
+        <h3>Proceed with the two-week delay</h3>
+        <p>Run the additional full regression cycle, then reassess launch readiness against its results.</p>
+      </article>
+      <article class="branch hold">
+        <b>Customer does not approve revised date</b>
+        <h3>Use the constrained cohort fallback</h3>
+        <p>Keep launch limited to the existing customer cohort and staff manual review of every flagged order; engineering continues the fix.</p>
+      </article>
+    </div>
+    <div class="limit"><strong>Residual risk:</strong> the manual control can reduce exposure, but it cannot eliminate the reliability defect. No single root cause has been established.</div>
+  </section>
+  <footer class="foot"><span><strong>Basis:</strong> fictional benchmark case supplied for this report.</span><span>Evidence and recommendation are separated above.</span></footer>
+</main>
+</body>
+</html>

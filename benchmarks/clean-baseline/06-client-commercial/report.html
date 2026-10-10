@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Aster Logistics | Reconciliation pilot proposal</title>
+  <style>
+    :root {
+      --ink: #172b3a;
+      --muted: #566978;
+      --line: #d7e0e6;
+      --paper: #fff;
+      --wash: #f2f6f8;
+      --blue: #1d5579;
+      --blue-soft: #e9f2f7;
+      --amber: #8a5a13;
+      --amber-soft: #fbf3e4;
+      --green: #27634f;
+      --green-soft: #eaf4ef;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e8eef2; color: var(--ink); font: 16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { width: min(100% - 36px, 1000px); margin: 36px auto; padding: clamp(26px, 5vw, 60px); background: var(--paper); border: 1px solid var(--line); box-shadow: 0 16px 48px #17364a12; }
+    .topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    .eyebrow { margin: 0 0 10px; color: var(--blue); font-size: .76rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    header { padding-top: 34px; }
+    h1 { max-width: 780px; margin: 0; font-size: clamp(2.1rem, 5vw, 3.55rem); line-height: 1.06; letter-spacing: -.045em; }
+    .dek { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: 1.1rem; }
+    .decision { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; margin: 32px 0; padding: 23px 25px; border-left: 4px solid var(--blue); background: var(--blue-soft); }
+    .decision h2 { margin: 0 0 5px; font-size: 1.05rem; }
+    .decision p { margin: 0; }
+    .price { min-width: 185px; text-align: right; }
+    .price strong { display: block; color: var(--blue); font-size: 1.65rem; line-height: 1.15; }
+    .price span { color: var(--muted); font-size: .83rem; }
+    .section-title { margin: 34px 0 14px; font-size: 1.18rem; letter-spacing: -.015em; }
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .fact { min-height: 112px; padding: 17px; border: 1px solid var(--line); background: #fff; }
+    .fact strong { display: block; margin-bottom: 5px; color: var(--blue); font-size: 1.35rem; line-height: 1.15; }
+    .fact span { color: var(--muted); font-size: .88rem; }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .panel { padding: 21px; border: 1px solid var(--line); background: #fff; }
+    .panel h3 { margin: 0 0 10px; font-size: 1rem; }
+    ul, ol { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 8px; }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { position: relative; min-height: 42px; padding-left: 44px; }
+    .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 0; display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: var(--blue-soft); color: var(--blue); font-weight: 750; }
+    .notice { margin: 20px 0 0; padding: 17px 19px; border: 1px solid #ead8b7; background: var(--amber-soft); color: #5e481e; }
+    .notice strong { color: var(--amber); }
+    .green { border-color: #c8ded3; background: var(--green-soft); }
+    .green strong { color: var(--green); }
+    .terms { width: 100%; border-collapse: collapse; }
+    .terms th, .terms td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .terms th { width: 26%; color: var(--muted); font-weight: 650; }
+    .ask { margin-top: 30px; padding: 24px; background: #17384d; color: #fff; }
+    .ask h2 { margin: 0 0 7px; font-size: 1.2rem; }
+    .ask p { margin: 0; color: #dce7ed; }
+    footer { margin-top: 24px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+    @media (max-width: 720px) { main { width: 100%; margin: 0; border: 0; padding: 25px 20px; } .facts { grid-template-columns: repeat(2, 1fr); } .columns { grid-template-columns: 1fr; } .decision { grid-template-columns: 1fr; } .price { text-align: left; } .topline { align-items: flex-start; flex-direction: column; } }
+    @media print { body { background: #fff; } main { width: 100%; margin: 0; padding: 20px; border: 0; box-shadow: none; } .panel, .fact, .decision, .notice, .ask { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="topline"><span>ASTER LOGISTICS · CLIENT PROPOSAL</span><span>Six-week pilot · Proposed start: 3 November</span></div>
+    <header>
+      <p class="eyebrow">Supplier notice reconciliation</p>
+      <h1>A bounded pilot to make delivery exceptions visible.</h1>
+      <p class="dek">We propose a six-week, fixed-fee pilot to compare supplier delivery notices with existing purchase-order records, review exceptions each week, and report what reconciles and what remains unresolved.</p>
+    </header>
+
+    <section class="decision" aria-labelledby="decision-title">
+      <div><h2 id="decision-title">Decision requested</h2><p>Approve the pilot scope and fee, subject to procurement approval and timely access to sample files and a test environment.</p></div>
+      <div class="price"><strong>EGP 180,000</strong><span>Fixed pilot fee · VAT and third-party licensing excluded</span></div>
+    </section>
+
+    <h2 class="section-title">Pilot at a glance</h2>
+    <section class="facts" aria-label="Pilot limits">
+      <div class="fact"><strong>6 weeks</strong><span>Time-bounded pilot</span></div>
+      <div class="fact"><strong>1 unit</strong><span>One Aster business unit</span></div>
+      <div class="fact"><strong>≤25</strong><span>Suppliers in scope</span></div>
+      <div class="fact"><strong>≤1,500</strong><span>Delivery notices per month</span></div>
+    </section>
+
+    <h2 class="section-title">What the pilot includes</h2>
+    <section class="columns">
+      <div class="panel"><h3>Vendor responsibilities</h3><ul>
+        <li>Configure one CSV import for the agreed delivery-notice sample format.</li>
+        <li>Map and document up to 12 fields agreed with Aster.</li>
+        <li>Run a weekly exception review during the pilot.</li>
+        <li>Deliver a closeout report with reconciliation rates and unresolved exception categories.</li>
+      </ul></div>
+      <div class="panel"><h3>Aster prerequisites</h3><ul>
+        <li>Provide representative sample files within five business days of kickoff.</li>
+        <li>Name an operations owner to coordinate field decisions and weekly reviews.</li>
+        <li>Provide access to a test environment within five business days of kickoff.</li>
+      </ul></div>
+    </section>
+
+    <h2 class="section-title">Delivery and payment</h2>
+    <section class="columns">
+      <div class="panel"><h3>Commercial terms</h3><table class="terms">
+        <tr><th>Fixed fee</th><td>EGP 180,000, excluding VAT and third-party licensing.</td></tr>
+        <tr><th>At kickoff</th><td>50% of fee: EGP 90,000.</td></tr>
+        <tr><th>After acceptance</th><td>Remaining 50%: EGP 90,000 after Aster accepts the closeout report.</td></tr>
+        <tr><th>Duration</th><td>Six weeks. Timely start depends on procurement approval and readiness of the required inputs.</td></tr>
+      </table></div>
+      <div class="panel"><h3>Proposed sequence</h3><ol class="steps">
+        <li><strong>Kickoff:</strong> confirm the business unit, sample files, operations owner, test access, and agreed fields.</li>
+        <li><strong>Configure:</strong> set up the single CSV import and document up to 12 field mappings.</li>
+        <li><strong>Review weekly:</strong> examine exceptions and record unresolved categories.</li>
+        <li><strong>Close out:</strong> submit the report of reconciliation rates and unresolved exception categories for acceptance.</li>
+      </ol></div>
+    </section>
+
+    <h2 class="section-title">Acceptance and boundaries</h2>
+    <section class="columns">
+      <div class="panel"><h3>Acceptance criteria</h3><p>Acceptance of the closeout report means:</p><ul>
+        <li>The agreed sample files import.</li>
+        <li>Each field mapping is documented.</li>
+        <li>The report lists known exclusions.</li>
+      </ul><p style="margin-bottom:0">A target match rate is not an acceptance condition because source data quality has not been validated.</p></div>
+      <div class="panel"><h3>Outside this proposal</h3><ul>
+        <li>Production deployment and ongoing support.</li>
+        <li>Any integration beyond the one CSV import.</li>
+        <li>Third-party licensing charges and VAT.</li>
+        <li>A second business unit, more than 25 suppliers, or more than 1,500 notices per month.</li>
+      </ul></div>
+    </section>
+    <p class="notice"><strong>Scope changes:</strong> A second business unit or volumes above the stated supplier or notice limits require a separately priced change request. Production deployment, ongoing support, and additional integrations are not approved under this pilot proposal.</p>
+    <p class="notice green"><strong>Start-date dependency:</strong> The sponsor’s requested 3 November start is proposed, not confirmed. Procurement approval and sample-file readiness remain unconfirmed; access and the named operations owner are also required within five business days of kickoff.</p>
+
+    <section class="ask" aria-label="Approval request"><h2>Approve a six-week, defined-scope pilot</h2><p>Approval confirms the scope, fixed fee, payment milestones, prerequisites, acceptance criteria, and exclusions described above. The start date remains subject to procurement approval and readiness.</p></section>
+    <footer>Prepared for Aster Logistics · Fictional benchmark case. All scope and commercial terms on this page reflect the supplied case facts; no production capability or service commitment is implied.</footer>
+  </main>
+</body>
+</html>

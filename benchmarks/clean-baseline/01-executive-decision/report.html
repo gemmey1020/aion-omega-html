@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Launch decision | Board brief</title>
+  <style>
+    :root {
+      --ink: #172b3a;
+      --muted: #566978;
+      --line: #d7e0e6;
+      --paper: #ffffff;
+      --wash: #f2f6f8;
+      --blue: #1d5579;
+      --blue-soft: #e9f2f7;
+      --amber: #8a5a13;
+      --amber-soft: #fbf3e4;
+      --green: #27634f;
+      --green-soft: #eaf4ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e8eef2;
+      color: var(--ink);
+      font: 16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(100% - 40px, 960px);
+      margin: 40px auto;
+      padding: clamp(28px, 5vw, 58px);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 16px 48px #17364a12;
+    }
+    .eyebrow { margin: 0 0 10px; color: var(--blue); font-size: .76rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { max-width: 740px; margin: 0; font-size: clamp(2rem, 5vw, 3.35rem); line-height: 1.08; letter-spacing: -.045em; }
+    .dek { max-width: 720px; margin: 17px 0 0; color: var(--muted); font-size: 1.08rem; }
+    .recommendation {
+      margin: 34px 0 30px;
+      padding: 23px 25px;
+      border-left: 4px solid var(--blue);
+      background: var(--blue-soft);
+    }
+    .recommendation h2 { margin: 0 0 7px; font-size: 1.05rem; }
+    .recommendation p { margin: 0; }
+    .section-title { margin: 34px 0 14px; font-size: 1.15rem; letter-spacing: -.015em; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .fact { min-height: 126px; padding: 18px; border: 1px solid var(--line); background: #fff; }
+    .fact strong { display: block; margin-bottom: 7px; color: var(--blue); font-size: 1.7rem; line-height: 1.1; }
+    .fact span { color: var(--muted); font-size: .92rem; }
+    .columns { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .panel { padding: 20px 21px; border: 1px solid var(--line); }
+    .panel h3 { margin: 0 0 10px; font-size: 1rem; }
+    ul { margin: 0; padding-left: 1.2rem; }
+    li + li { margin-top: 8px; }
+    .judgment { border-color: #ead8b7; background: var(--amber-soft); }
+    .judgment h3 { color: var(--amber); }
+    .conditions { margin-top: 14px; padding: 20px 22px; border: 1px solid #c8ddd4; background: var(--green-soft); }
+    .conditions h3 { margin: 0 0 9px; color: var(--green); font-size: 1rem; }
+    .decision-note { margin-top: 14px; padding-top: 15px; border-top: 1px solid #c8ddd4; color: #36594d; font-size: .93rem; }
+    footer { margin-top: 34px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+    @media (max-width: 660px) {
+      body { background: var(--paper); }
+      main { width: 100%; margin: 0; padding: 28px 22px; border: 0; box-shadow: none; }
+      .evidence-grid, .columns { grid-template-columns: 1fr; }
+      .fact { min-height: auto; }
+    }
+    @media print {
+      body { background: white; }
+      main { width: 100%; margin: 0; padding: 18mm; border: 0; box-shadow: none; }
+      .fact, .panel, .recommendation, .conditions { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Board decision brief · Fictional benchmark case</p>
+      <h1>Keep the 1 November launch conditional</h1>
+      <p class="dek">Choose a short, controlled path to the scheduled date only if the manual review can be staffed and the customer cohort can be clearly constrained. Otherwise, seek approval for a two-week delay and use the time for another full regression cycle.</p>
+    </header>
+
+    <section class="recommendation" aria-labelledby="rec-title">
+      <h2 id="rec-title">Recommendation · Conditional constrained launch</h2>
+      <p>Proceed for the existing customer cohort with a staffed manual review of every flagged order while engineering continues the fix, subject to operational readiness and a clear stop decision if the control cannot be sustained. The control reduces exposure; it does not remove the reliability defect. If those conditions cannot be met, pursue the two-week delay, which requires customer approval.</p>
+    </section>
+
+    <h2 class="section-title">What the evidence says</h2>
+    <section class="evidence-grid" aria-label="Evidence summary">
+      <div class="fact"><strong>7 / 40</strong><span>Scripted checkout runs ended in a retry or timeout in the latest reliability exercise.</span></div>
+      <div class="fact"><strong>2 regions</strong><span>Failures appeared in two test regions; a single root cause has not been established.</span></div>
+      <div class="fact"><strong>2 shifts / day</strong><span>Estimated additional operations staffing for manual review during the first week.</span></div>
+    </section>
+
+    <section class="columns" aria-label="Decision basis">
+      <div class="panel">
+        <h3>Known conditions</h3>
+        <ul>
+          <li>The launch is scheduled for 1 November and is tied to a customer contract.</li>
+          <li>A two-week delay would allow another full regression cycle.</li>
+          <li>The alternative is a constrained launch for the existing customer cohort with manual review of every flagged order.</li>
+          <li>No production customer has been exposed to the defect; no production payment data is affected.</li>
+          <li>The account lead says the date matters contractually, but customer acceptance of a delay is unconfirmed.</li>
+        </ul>
+      </div>
+      <div class="panel judgment">
+        <h3>Board judgment</h3>
+        <ul>
+          <li>The observed exercise failures are a material reliability signal, but the evidence does not identify one root cause or establish production impact.</li>
+          <li>Manual review offers a bounded way to reduce exposure while preserving the scheduled date, with added staffing and residual defect risk.</li>
+          <li>Delay buys regression time but introduces a customer approval dependency against a contract-sensitive date.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="conditions" aria-labelledby="conditions-title">
+      <h3 id="conditions-title">Conditions that would change the recommendation</h3>
+      <ul>
+        <li><strong>Move to delay:</strong> if two additional operations shifts each day for the first week cannot be staffed, or if every flagged order cannot receive the planned manual review.</li>
+        <li><strong>Move to delay:</strong> if the customer approves a revised date and the board prefers another full regression cycle over launching with a known, unresolved reliability defect.</li>
+        <li><strong>Reassess before launch:</strong> if new evidence changes the understood scope of the failures or the ability of the manual control to reduce exposure. The current engineering assessment is that the control cannot eliminate the defect.</li>
+      </ul>
+      <p class="decision-note"><strong>Decision requested:</strong> authorize the constrained path only when its staffing and review conditions are met; otherwise direct the team to seek customer approval for the two-week delay.</p>
+    </section>
+
+    <footer>Evidence is limited to the supplied fictional case facts. Recommendation and decision conditions are board judgment; customer acceptance of a revised date remains unconfirmed.</footer>
+  </main>
+</body>
+</html>

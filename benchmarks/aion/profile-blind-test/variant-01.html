@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101820">
+<title>Payments checkout incident | Evidence review</title>
+<style>
+:root{color-scheme:dark;--bg:#101820;--surface:#17232d;--surface2:#1c2a34;--line:#344652;--text:#ecf1f3;--muted:#a9bac2;--cyan:#65d5db;--blue:#72a9f2;--sand:#dec495;--amber:#e2bd72;--green:#8ec8aa;--max:1120px}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 84% -12%,rgba(65,157,182,.14),transparent 38%),linear-gradient(160deg,#121d26,#101820 48%,#141b22);color:var(--text);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;font-variant-numeric:tabular-nums}main{width:min(var(--max),100% - 48px);margin:0 auto;padding:36px 0 62px}.mast{display:flex;justify-content:space-between;align-items:center;gap:16px;border-bottom:1px solid var(--line);padding:0 0 14px;color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.mast strong{color:var(--cyan);font-weight:650}.mast span:last-child{text-align:right}.intro{padding:32px 0 22px;max-width:850px}.eyebrow,.label{color:var(--cyan);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}h1{font-size:clamp(32px,5vw,54px);line-height:1.08;letter-spacing:-.035em;margin:11px 0 12px;max-width:800px}.dek{margin:0;color:#c5d0d5;font-size:17px;max-width:780px}.snapshot{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:1px;border:1px solid var(--line);background:var(--line);margin:20px 0 28px}.snapshot>div{background:linear-gradient(145deg,rgba(28,42,52,.98),rgba(21,32,41,.98));padding:17px 19px;min-height:100px}.snapshot .wide{grid-row:span 2}.snapshot .k{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}.snapshot strong{display:block;font-size:19px;line-height:1.35;margin-top:7px}.snapshot .wide strong{font-size:21px}.status-line{display:flex;align-items:center;gap:9px;color:var(--sand);font-size:13px;margin-top:11px}.dot{width:8px;height:8px;border-radius:50%;background:var(--amber);box-shadow:0 0 14px rgba(226,189,114,.35)}section{margin:34px 0}.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding:0 0 11px;margin-bottom:14px}.section-head h2{font-size:21px;letter-spacing:-.02em;margin:0}.section-head p{margin:0;color:var(--muted);font-size:12px;text-align:right}.timeline{position:relative;margin:0;padding:2px 0 0 0;list-style:none}.timeline:before{content:"";position:absolute;left:89px;top:11px;bottom:22px;width:1px;background:linear-gradient(var(--cyan),#557487 68%,var(--amber))}.timeline li{display:grid;grid-template-columns:74px 30px minmax(0,1fr);gap:15px;position:relative;padding:0 0 23px}.timeline time{font-size:13px;color:var(--sand);padding-top:1px;white-space:nowrap}.pin{position:relative;z-index:1;width:11px;height:11px;border-radius:50%;margin:6px auto 0;background:var(--bg);border:2px solid var(--cyan)}.timeline li:last-child .pin{border-color:var(--amber)}.event h3{font-size:15px;margin:0 0 3px}.event p{margin:0;color:#bac8ce;font-size:14px}.event .tag{display:inline-block;color:var(--cyan);font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-left:7px}.event .tag.caution{color:var(--amber)}.interval{margin:2px 0 0 119px;padding:10px 13px;border-left:2px solid var(--blue);background:rgba(114,169,242,.07);color:#d1dce2;font-size:13px}.interval b{color:var(--blue)}.columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid var(--line);background:linear-gradient(150deg,rgba(28,42,52,.8),rgba(20,30,38,.8));padding:19px 20px}.panel h3{margin:0 0 12px;font-size:16px}.panel ul{margin:0;padding-left:19px}.panel li{padding:0 0 10px;color:#c7d2d7;font-size:14px}.panel li:last-child{padding-bottom:0}.panel.observed{border-top:2px solid var(--green)}.panel.open{border-top:2px solid var(--amber)}.panel.observed h3{color:var(--green)}.panel.open h3{color:var(--sand)}.callout{margin-top:18px;border-left:2px solid var(--blue);padding:12px 15px;background:rgba(114,169,242,.065);color:#cad6dc;font-size:14px}.callout strong{color:#e7eef1}.next{display:grid;grid-template-columns:44px 1fr;gap:13px;align-items:start;padding:15px 0;border-top:1px solid var(--line)}.next:first-of-type{border-top:0}.num{width:32px;height:32px;border:1px solid #567184;border-radius:50%;display:grid;place-items:center;color:var(--cyan);font-size:12px}.next h3{font-size:15px;margin:0 0 4px}.next p{font-size:14px;color:#bac8ce;margin:0}.owner{color:var(--sand);font-size:12px}.foot{border-top:1px solid var(--line);margin-top:35px;padding-top:14px;color:var(--muted);font-size:12px}.foot strong{color:#d5e0e4}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:700px){main{width:min(100% - 32px,var(--max));padding-top:24px}.mast{font-size:10px;align-items:flex-start}.intro{padding-top:25px}.dek{font-size:15px}.snapshot{grid-template-columns:1fr 1fr;margin-top:17px}.snapshot .wide{grid-column:1/-1;grid-row:auto;min-height:0}.snapshot>div{min-height:88px;padding:14px}.snapshot strong{font-size:17px}.snapshot .wide strong{font-size:19px}.section-head{display:block}.section-head p{text-align:left;margin-top:4px}.columns{grid-template-columns:1fr;gap:12px}.timeline:before{left:72px}.timeline li{grid-template-columns:57px 30px minmax(0,1fr);gap:9px;padding-bottom:21px}.timeline time{font-size:12px}.event h3{font-size:14px}.event p{font-size:13px}.interval{margin-left:96px;font-size:12px}.panel{padding:16px}.next{grid-template-columns:37px 1fr}}
+@media(max-width:390px){main{width:calc(100% - 26px)}.mast{letter-spacing:.04em}.timeline:before{left:63px}.timeline li{grid-template-columns:49px 28px minmax(0,1fr);gap:7px}.timeline time{font-size:11px}.interval{margin-left:84px}.snapshot>div{padding:12px}.snapshot .k{font-size:10px}}
+</style>
+</head>
+<body>
+<main>
+  <div class="mast"><strong>Incident evidence review</strong><span>Payments service · North + Central</span></div>
+  <header class="intro">
+    <div class="eyebrow">Cross-functional response team</div>
+    <h1>Checkout errors contained; initiating fault remains open</h1>
+    <p class="dek">Intermittent HTTP 502 responses affected checkout attempts across two regions. Traffic was routed through the secondary gateway; errors returned to baseline. The initiating fault and the number of affected attempts are not yet established.</p>
+  </header>
+  <div class="snapshot" aria-label="Incident summary">
+    <div class="wide"><span class="k">Current state</span><strong>Errors at normal baseline</strong><span class="status-line"><i class="dot" aria-hidden="true"></i>Containment observed · cause under investigation</span></div>
+    <div><span class="k">Observed error window</span><strong>19 minutes</strong></div>
+    <div><span class="k">Alert → baseline</span><strong>19 minutes</strong></div>
+    <div><span class="k">Payment records</span><strong>No loss or duplication found</strong></div>
+    <div><span class="k">Affected attempts</span><strong>Not reconciled</strong></div>
+  </div>
+  <section aria-labelledby="chronology-title">
+    <div class="section-head"><h2 id="chronology-title">Chronology · UTC</h2><p>Reported milestones and explicitly stated intervals</p></div>
+    <ol class="timeline">
+      <li><time datetime="09:11">09:11</time><span class="pin" aria-hidden="true"></span><div class="event"><h3>Monitoring alert received</h3><p>First alert for intermittent HTTP 502 responses during checkout.</p></div></li>
+      <li><time datetime="09:16">09:16</time><span class="pin" aria-hidden="true"></span><div class="event"><h3>Mitigation began</h3><p>On-call engineer started routing affected traffic through the secondary gateway.</p></div></li>
+      <li><time datetime="09:30">09:30</time><span class="pin" aria-hidden="true"></span><div class="event"><h3>Error rates returned to baseline</h3><p>Normal baseline observed after mitigation.</p></div></li>
+    </ol>
+    <div class="interval"><b>Duration accounting:</b> elevated-error window: 19 minutes from first observed error to baseline. Alert-to-baseline interval: 19 minutes. First observed error time was not separately specified.</div>
+  </section>
+  <section aria-labelledby="evidence-title">
+    <div class="section-head"><h2 id="evidence-title">Evidence status</h2><p>Observed findings are separated from open questions</p></div>
+    <div class="columns">
+      <article class="panel observed"><h3>Observed facts</h3><ul>
+        <li>Intermittent HTTP 502 responses occurred during checkout in the North and Central regions.</li>
+        <li>Monitoring first alerted at 09:11 UTC; mitigation started at 09:16 UTC.</li>
+        <li>Error rates returned to the normal baseline at 09:30 UTC.</li>
+        <li>Payments ledger review found no lost or duplicated payment records.</li>
+      </ul></article>
+      <article class="panel open"><h3>Unresolved</h3><ul>
+        <li>The initiating fault remains under investigation.</li>
+        <li>The number of affected checkout attempts has not been reconciled.</li>
+        <li>It is not established whether gateway failover addressed the initiating fault or only reduced symptoms.</li>
+        <li>No customer-facing statement has been approved.</li>
+      </ul></article>
+    </div>
+    <aside class="callout"><strong>Containment interpretation:</strong> gateway failover reduced errors and baseline was restored. This sequence does not, by itself, establish the initiating cause or prove that the failover corrected it.</aside>
+  </section>
+  <section aria-labelledby="collection-title">
+    <div class="section-head"><h2 id="collection-title">Next evidence collection</h2><p>Requested by the incident commander</p></div>
+    <div class="next"><span class="num">01</span><div><h3>Review logs for 09:05–09:35 UTC</h3><p>Examine the interval surrounding the alert, mitigation, and return to baseline.</p><span class="owner">Requested action · incident commander</span></div></div>
+    <div class="next"><span class="num">02</span><div><h3>Confirm with both regional service owners</h3><p>Obtain confirmation from the North and Central regional service owners.</p><span class="owner">Requested action · both regional service owners</span></div></div>
+    <div class="next"><span class="num">03</span><div><h3>Reconcile affected checkout attempts</h3><p>Establish the affected-attempt count before stating a customer or volume impact.</p><span class="owner">Evidence gap · owner not specified</span></div></div>
+    <div class="next"><span class="num">04</span><div><h3>Continue initiating-fault investigation</h3><p>Determine whether failover changed the fault condition or mitigated its observed effects.</p><span class="owner">Evidence gap · owner not specified</span></div></div>
+  </section>
+  <footer class="foot"><strong>Communication boundary:</strong> no customer-facing statement is approved. This review records the supplied incident facts and requested follow-up; it does not establish root cause, customer count, or impact percentage.</footer>
+</main>
+</body>
+</html>

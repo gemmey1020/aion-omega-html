@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f2ec">
+  <title>Namaa Workflow — Two-Quarter Focus Memo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f2ec;
+      --card: #fffefa;
+      --ink: #172622;
+      --muted: #63716c;
+      --line: #d9ded7;
+      --green: #165b48;
+      --green-soft: #e6f0e9;
+      --amber: #a65a1b;
+      --amber-soft: #f8eee0;
+      --red: #9a453c;
+      --shadow: 0 16px 50px rgba(23, 38, 34, .07);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
+    .page { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 34px 0 64px; }
+    .topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+    .mark { display: flex; align-items: center; gap: 10px; color: var(--green); font-weight: 750; letter-spacing: .14em; }
+    .mark-icon { display: grid; width: 24px; height: 24px; place-items: center; border: 1.5px solid var(--green); border-radius: 7px 7px 7px 2px; font-size: 12px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(250px, .7fr); gap: 42px; align-items: end; padding: 54px 0 38px; }
+    .eyebrow { margin: 0 0 12px; color: var(--green); font-size: 12px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { max-width: 720px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 6vw, 66px); font-weight: 500; letter-spacing: -.045em; line-height: 1.02; }
+    .dek { max-width: 650px; margin: 20px 0 0; color: #43534d; font-size: 18px; line-height: 1.5; }
+    .decision-box { padding: 22px 23px; border: 1px solid #bad0c1; border-radius: 4px 18px 4px 4px; background: var(--green-soft); }
+    .decision-box .label { margin: 0 0 8px; color: var(--green); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .decision-box p:last-child { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 20px; line-height: 1.3; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 0 0 42px; border: 1px solid var(--line); background: var(--line); }
+    .metric { min-height: 120px; padding: 19px 20px; background: var(--card); }
+    .metric strong { display: block; margin-bottom: 8px; font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weight: 500; letter-spacing: -.04em; line-height: 1; }
+    .metric span { display: block; color: var(--muted); font-size: 12px; }
+    .metric .tag { display: inline-block; margin-top: 10px; color: var(--green); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    section { margin: 0 0 42px; }
+    .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 17px; }
+    .section-no { color: var(--amber); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+    h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 28px; font-weight: 500; letter-spacing: -.025em; }
+    .section-intro { max-width: 720px; margin: -6px 0 18px 33px; color: var(--muted); font-size: 14px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card { padding: 21px 22px; border: 1px solid var(--line); border-radius: 4px 15px 4px 4px; background: var(--card); box-shadow: var(--shadow); }
+    .card h3 { margin: 0 0 10px; font-size: 15px; }
+    .card p { margin: 0; color: #4f5f59; font-size: 14px; }
+    .signal-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .signal-list li { display: grid; grid-template-columns: 10px 1fr; gap: 10px; color: #4f5f59; font-size: 14px; }
+    .dot { width: 7px; height: 7px; margin-top: 8px; border-radius: 50%; background: var(--green); }
+    .dot.amber { background: var(--amber); }
+    .recommendation { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 18px; padding: 24px; border-left: 4px solid var(--green); background: #e8efe9; }
+    .recommendation h3 { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 500; }
+    .recommendation p { margin: 0; color: #40514a; font-size: 14px; }
+    .guardrail { align-self: center; padding-left: 18px; border-left: 1px solid #bdcec1; color: var(--green); font-size: 13px; font-weight: 700; }
+    .roadmap { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .phase { padding: 20px 22px; border-top: 3px solid var(--green); background: var(--card); }
+    .phase:nth-child(2) { border-color: var(--amber); }
+    .phase-label { margin: 0 0 8px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .phase h3 { margin: 0 0 10px; font-size: 17px; }
+    .phase ul { margin: 0; padding-left: 18px; color: #4f5f59; font-size: 13px; }
+    .phase li + li { margin-top: 6px; }
+    .cost-table { width: 100%; border-collapse: collapse; background: var(--card); font-size: 14px; }
+    .cost-table th, .cost-table td { padding: 14px 16px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .cost-table th { width: 25%; color: var(--green); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .cost-table td { color: #4f5f59; }
+    .assumption { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .assumption .card { box-shadow: none; }
+    .assumption h3 { display: flex; align-items: center; gap: 8px; }
+    .pill { padding: 3px 7px; border-radius: 20px; background: var(--amber-soft); color: var(--amber); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+    .note { padding: 18px 20px; border: 1px solid #e5c89f; background: var(--amber-soft); color: #68431f; font-size: 13px; }
+    .quote { margin: 0; padding: 22px 25px; border-right: 3px solid var(--amber); background: #fbf5eb; color: #604a34; font-size: 18px; line-height: 1.7; text-align: right; }
+    .quote cite { display: block; margin-top: 8px; color: #89785f; font-size: 11px; font-style: normal; letter-spacing: .07em; text-transform: uppercase; }
+    footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 28px, 600px); padding-top: 22px; }
+      .topline { align-items: flex-start; font-size: 10px; }
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 38px 0 28px; }
+      .metrics { grid-template-columns: 1fr 1fr; margin-bottom: 34px; }
+      .metric { min-height: 105px; padding: 15px; }
+      .metric strong { font-size: 29px; }
+      .grid-2, .roadmap, .assumption, .recommendation { grid-template-columns: 1fr; }
+      .recommendation { gap: 16px; }
+      .guardrail { padding: 12px 0 0; border-left: 0; border-top: 1px solid #bdcec1; }
+      .section-intro { margin-left: 0; }
+      .cost-table th, .cost-table td { padding: 11px 10px; }
+      footer { flex-direction: column; gap: 5px; }
+    }
+    @media print {
+      body { background: white; }
+      .page { width: 100%; padding: 0; }
+      .card { box-shadow: none; }
+      section, .metrics, .hero { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topline">
+      <div class="mark"><span class="mark-icon">N</span> NAMAA WORKFLOW</div>
+      <div>Founder strategy memo · Next two quarters</div>
+    </div>
+
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Decision brief / 01</p>
+        <h1>Make the current product work harder before widening the bet.</h1>
+        <p class="dek">For the next two quarters, concentrate the small delivery team on onboarding and deeper use of the approvals workflow. Keep Supplier Analytics alive only through a bounded, paid discovery test with no dedicated team allocation.</p>
+      </div>
+      <aside class="decision-box">
+        <p class="label">Recommended allocation</p>
+        <p>Adoption first.<br>Paid learning second.<br>No split-team build.</p>
+      </aside>
+    </header>
+
+    <div class="metrics" aria-label="Measured company signals">
+      <div class="metric"><strong>11 mo</strong><span>Runway at current plan</span><span class="tag">Measured</span></div>
+      <div class="metric"><strong>EGP 1.2m</strong><span>Monthly recurring revenue</span><span class="tag">Measured</span></div>
+      <div class="metric"><strong>74%</strong><span>Revenue from 18 accounts</span><span class="tag">Concentration</span></div>
+      <div class="metric"><strong>91%</strong><span>Gross revenue retention · trailing 12 months</span><span class="tag">Measured</span></div>
+    </div>
+
+    <section>
+      <div class="section-head"><span class="section-no">01</span><h2>What the evidence says</h2></div>
+      <p class="section-intro">The strongest near-term evidence is attached to the existing product and its implementation path. The new line has interest, but not yet commercial or delivery proof.</p>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Current product: real usage, visible friction</h3>
+          <ul class="signal-list">
+            <li><span class="dot"></span><span>29 of 46 active workspaces used the March approvals workflow at least weekly last month.</span></li>
+            <li><span class="dot amber"></span><span>8 of 46 active workspaces have not completed onboarding.</span></li>
+            <li><span class="dot amber"></span><span>Three accounts closed this quarter against an internal target of five. Two delayed decisions cited unclear implementation ownership; one cited price.</span></li>
+            <li><span class="dot"></span><span>Gross revenue retention was 91% over the last twelve months; 74% of MRR comes from 18 accounts.</span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Supplier Analytics: a hypothesis, not a pipeline</h3>
+          <ul class="signal-list">
+            <li><span class="dot amber"></span><span>Four interview requests indicate interest in a conversation.</span></li>
+            <li><span class="dot amber"></span><span>There is no signed pilot, validated price, or delivery estimate in the supplied facts.</span></li>
+            <li><span class="dot"></span><span>Support capacity is two engineers plus one implementation lead; next-quarter hiring is not approved.</span></li>
+            <li><span class="dot amber"></span><span>A split would draw capacity away from a workflow already used weekly in 29 workspaces while implementation friction remains unresolved.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="section-no">02</span><h2>The two-quarter choice</h2></div>
+      <div class="recommendation">
+        <div>
+          <h3>Put the operating center of gravity on adoption.</h3>
+          <p>Use the existing team to complete onboarding for the eight unfinished workspaces, clarify implementation ownership in the customer journey, and learn what separates weekly adopters from the rest. In parallel, allow only a small paid discovery test for Supplier Analytics. Do not commit a build team until a customer pays and scope, price, and delivery effort become testable.</p>
+        </div>
+        <div class="guardrail">Do not treat interviews as demand validation or assume that adoption work will improve retention or sales until measured.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="section-no">03</span><h2>Sequence the work</h2></div>
+      <div class="roadmap">
+        <article class="phase">
+          <p class="phase-label">Quarter 1 · Instrument and unblock</p>
+          <h3>Make onboarding ownership explicit</h3>
+          <ul>
+            <li>Assign a named owner and clear handoff for each onboarding step using current capacity.</li>
+            <li>Work through the 8 unfinished workspaces; record completion and blockers.</li>
+            <li>Track weekly approvals use across the 46 active workspaces with a consistent definition.</li>
+            <li>Run a paid discovery offer for Supplier Analytics only if a buyer accepts a defined, bounded scope.</li>
+          </ul>
+        </article>
+        <article class="phase">
+          <p class="phase-label">Quarter 2 · Review evidence and choose</p>
+          <h3>Deepen what is working; gate expansion</h3>
+          <ul>
+            <li>Compare onboarding completion and weekly use with the starting cohort; document the method and counts.</li>
+            <li>Review implementation-related sales delays and whether ownership changes addressed them.</li>
+            <li>For the new line, require paid commitment plus validated scope, price, and delivery estimate before proposing build capacity.</li>
+            <li>Revisit the allocation and runway implications with observed results; do not presume hiring approval.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="section-no">04</span><h2>Make the opportunity cost explicit</h2></div>
+      <table class="cost-table">
+        <tbody>
+          <tr><th scope="row">Adoption focus</th><td>Uses scarce engineering and implementation capacity on the shipped workflow, the 8 incomplete onboardings, and implementation ownership friction associated with two delayed sales decisions.</td></tr>
+          <tr><th scope="row">What gets deferred</th><td>A broader Supplier Analytics build and any assumption of near-term revenue from that line. Four interview requests do not establish willingness to pay or delivery feasibility.</td></tr>
+          <tr><th scope="row">Cost of a split</th><td>Less concentrated attention on both onboarding and product discovery, with the existing team already limited to two engineers and one implementation lead and no approved next-quarter hiring budget.</td></tr>
+          <tr><th scope="row">Cost of adoption-only</th><td>Slower learning about Supplier Analytics. A small paid test preserves some learning while limiting the risk of assigning a team to an unvalidated offer.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="section-no">05</span><h2>Signals and assumptions stay separate</h2></div>
+      <div class="assumption">
+        <article class="card">
+          <h3>Measured in the source <span class="pill">Evidence</span></h3>
+          <p>Runway, MRR, account concentration, trailing twelve-month gross revenue retention, weekly approvals usage, incomplete onboarding count, quarterly closes versus internal target, stated reasons for two delays and one price objection, interview requests, available support capacity, and hiring-budget status.</p>
+        </article>
+        <article class="card">
+          <h3>To test, not assume <span class="pill">Unknown</span></h3>
+          <p>Whether completing onboarding increases weekly usage; whether deeper usage changes retention or expansion; whether clearer implementation ownership shortens sales decisions; whether any Supplier Analytics interview request converts to a paid pilot; and what the new line would cost to deliver.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="section-no">06</span><h2>Decision rule</h2></div>
+      <div class="note"><strong>Continue the adoption emphasis</strong> while onboarding work and usage are being measured. Consider allocating build capacity to Supplier Analytics only after a paid commitment establishes buyer willingness, and after the scope, price, and delivery estimate are documented. If these conditions do not arrive, keep the line at discovery level and preserve the team's focus.</div>
+    </section>
+
+    <section>
+      <blockquote class="quote" lang="ar" dir="rtl">
+        “التركيز الآن على استخدام أعمق للعملاء الحاليين، مع إبقاء Supplier Analytics كفرضية تحتاج اختبارًا مدفوعًا قبل تخصيص فريق.”
+        <cite>Founder working note · supplied source</cite>
+      </blockquote>
+    </section>
+
+    <footer><span>Prepared from the supplied fictional benchmark case.</span><span>Strategy recommendation · Two-quarter horizon</span></footer>
+  </main>
+</body>
+</html>

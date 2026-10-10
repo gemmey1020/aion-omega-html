@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Partner event pipeline | Architecture review</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f5f6;
+      --card: #fff;
+      --ink: #182a36;
+      --muted: #5b6d78;
+      --line: #d7e0e5;
+      --blue: #155b78;
+      --blue-soft: #e8f2f6;
+      --teal: #176b62;
+      --teal-soft: #e8f3f0;
+      --amber: #87540d;
+      --amber-soft: #fbf2e2;
+      --red: #9a4039;
+      --red-soft: #f9ecea;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); line-height: 1.55; }
+    .page { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 34px 0 58px; }
+    .masthead { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    .masthead strong { color: var(--blue); }
+    header { padding: 48px 0 30px; }
+    .eyebrow { margin: 0 0 10px; color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 800px; margin: 0; font-size: clamp(36px, 6vw, 62px); font-weight: 650; letter-spacing: -.05em; line-height: 1.02; }
+    .dek { max-width: 800px; margin: 16px 0 0; color: #4b5f6b; font-size: 17px; }
+    .status { display: grid; grid-template-columns: 1fr 1fr 1fr; margin: 0 0 30px; border: 1px solid var(--line); background: var(--line); gap: 1px; }
+    .status article { min-height: 116px; padding: 18px 20px; background: var(--card); }
+    .label { margin: 0 0 8px; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .status strong { display: block; margin-bottom: 5px; font-size: 19px; letter-spacing: -.025em; }
+    .status span { color: var(--muted); font-size: 12px; }
+    .state { color: var(--blue); }
+    .proposed { color: var(--teal); }
+    .uncertain { color: var(--amber); }
+    section { margin: 0 0 34px; }
+    .section-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+    .section-no { color: var(--blue); font-size: 11px; font-weight: 850; letter-spacing: .1em; }
+    h2 { margin: 0; font-size: 23px; letter-spacing: -.025em; }
+    .intro { max-width: 830px; margin: -5px 0 16px 30px; color: var(--muted); font-size: 13px; }
+    .flow-shell { padding: 22px; border: 1px solid var(--line); background: var(--card); }
+    .lane-label { display: flex; align-items: center; gap: 10px; margin: 0 0 11px; color: var(--muted); font-size: 10px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .lane-label::after { height: 1px; flex: 1; background: var(--line); content: ""; }
+    .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: stretch; gap: 23px; }
+    .node { position: relative; min-height: 102px; padding: 14px 13px; border: 1px solid var(--line); background: #fff; }
+    .node:not(:last-child)::after { position: absolute; top: 50%; right: -19px; width: 14px; border-top: 1px solid #94aab4; content: ""; }
+    .node:not(:last-child)::before { position: absolute; z-index: 1; top: calc(50% - 3px); right: -20px; width: 6px; height: 6px; border-top: 1px solid #94aab4; border-right: 1px solid #94aab4; transform: rotate(45deg); content: ""; }
+    .node h3 { margin: 0 0 6px; font-size: 13px; }
+    .node p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+    .node.current { border-top: 3px solid var(--blue); }
+    .node.future { border: 1px dashed #429080; border-top: 3px solid var(--teal); background: #f4faf8; }
+    .node.policy { border: 1px dashed #429080; border-top: 3px solid var(--teal); background: #f4faf8; }
+    .legend { display: flex; flex-wrap: wrap; gap: 15px; margin: 14px 0 0; color: var(--muted); font-size: 11px; }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .swatch { width: 12px; height: 9px; border-top: 3px solid var(--blue); background: white; }
+    .swatch.proposal { border: 1px dashed #429080; border-top: 3px solid var(--teal); background: #f4faf8; }
+    .branch { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+    .branch article { padding: 14px 16px; border: 1px solid var(--line); background: #fbfcfc; }
+    .branch h3 { margin: 0 0 5px; font-size: 13px; }
+    .branch p { margin: 0; color: #495f6a; font-size: 12px; }
+    .branch .hold { border-left: 3px solid var(--amber); background: #fffaf1; }
+    .branch .eligible { border-left: 3px solid var(--teal); background: #f4faf8; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .fact { padding: 18px 20px; border: 1px solid var(--line); background: var(--card); }
+    .fact h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 14px; }
+    .fact p { margin: 0; color: #495f6a; font-size: 13px; }
+    .badge { display: inline-flex; align-items: center; padding: 3px 7px; border-radius: 2px; font-size: 9px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+    .badge.current { background: var(--blue-soft); color: var(--blue); }
+    .badge.proposal { background: var(--teal-soft); color: var(--teal); }
+    .badge.open { background: var(--amber-soft); color: var(--amber); }
+    .badge.boundary { background: var(--red-soft); color: var(--red); }
+    .wide { grid-column: 1 / -1; }
+    .ownership { width: 100%; border-collapse: collapse; background: var(--card); font-size: 12px; }
+    .ownership th, .ownership td { padding: 12px 14px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .ownership th { color: var(--muted); background: #f8fafb; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    .ownership td:first-child { width: 23%; font-weight: 750; }
+    .ownership td:nth-child(2) { width: 33%; }
+    .ownership td:last-child { color: var(--muted); }
+    .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .decision { padding: 17px 19px; border-left: 3px solid var(--amber); background: var(--card); }
+    .decision h3 { margin: 0 0 7px; font-size: 14px; }
+    .decision p { margin: 0; color: #495f6a; font-size: 13px; }
+    .notice { padding: 17px 19px; border: 1px solid #e6c8c3; background: var(--red-soft); color: #713a35; font-size: 13px; }
+    .notice strong { display: block; margin-bottom: 3px; }
+    footer { display: flex; justify-content: space-between; gap: 18px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 28px, 560px); padding-top: 22px; }
+      .masthead { font-size: 9px; }
+      header { padding: 36px 0 24px; }
+      .status { grid-template-columns: 1fr; }
+      .status article { min-height: 0; }
+      .flow { grid-template-columns: 1fr; gap: 10px; }
+      .node { min-height: 0; }
+      .node:not(:last-child)::after { top: auto; right: 50%; bottom: -8px; width: 0; height: 7px; border-top: 0; border-left: 1px solid #94aab4; }
+      .node:not(:last-child)::before { top: auto; right: calc(50% - 3px); bottom: -9px; transform: rotate(135deg); }
+      .branch, .facts, .decision-grid { grid-template-columns: 1fr; }
+      .wide { grid-column: auto; }
+      .flow-shell { padding: 16px; }
+      .ownership { font-size: 11px; }
+      .ownership th, .ownership td { padding: 9px 8px; }
+      footer { flex-direction: column; gap: 4px; }
+    }
+    @media print {
+      body { background: white; }
+      .page { width: 100%; padding: 0; }
+      .status, .fact, .decision, .notice, .flow-shell, .branch, table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="masthead"><strong>Partner event service</strong><span>Architecture review · Proposed-state boundaries</span></div>
+    <header>
+      <p class="eyebrow">Fictional benchmark case · Source facts preserved</p>
+      <h1>Keep evidence, policy, and posting decisions traceable</h1>
+      <p class="dek">The service already moves partner webhooks through an intake queue, normalization, and an operations dashboard. The proposal inserts source evidence resolution and an eligibility decision before posting. That proposed control path is not confirmed as deployed.</p>
+    </header>
+
+    <div class="status" aria-label="Architecture review summary">
+      <article><p class="label">Current pipeline</p><strong class="state">Intake → normalize → dashboard</strong><span>Webhook payload is written to an intake queue before normalization.</span></article>
+      <article><p class="label">Proposed control</p><strong class="proposed">Resolve evidence → decide</strong><span>Source status and policy gate posting before the dashboard.</span></article>
+      <article><p class="label">Key unresolved boundary</p><strong class="uncertain">Replay and duplicates</strong><span>No confirmed replay UI or resolver idempotency guarantee.</span></article>
+    </div>
+
+    <section aria-labelledby="flow-title">
+      <div class="section-head"><span class="section-no">01</span><h2 id="flow-title">System flow and state boundary</h2></div>
+      <p class="intro">Solid blue nodes are described as current. Dashed teal nodes are proposed. The diagram shows the intended sequence; it does not assert a deployment, database, or topology choice.</p>
+      <div class="flow-shell">
+        <p class="lane-label">Event path</p>
+        <div class="flow" role="img" aria-label="Current partner webhook enters intake queue and normalization. Proposed resolver and policy decision precede the operations dashboard.">
+          <article class="node current"><h3>Partner webhook</h3><p>Accept partner event. Raw payload is written to intake queue.</p></article>
+          <article class="node current"><h3>Normalizer</h3><p>Creates normalized event with event ID, partner ID, received time, and source URL when available.</p></article>
+          <article class="node future"><h3>Evidence resolver</h3><p>Checks URL reachability; records content hash, retrieval time, and resolver status.</p></article>
+          <article class="node policy"><h3>Policy service</h3><p>Decides whether the event is eligible for automated posting.</p></article>
+          <article class="node current"><h3>Operations dashboard</h3><p>Reads normalized event and review status, not the raw webhook secret.</p></article>
+        </div>
+        <div class="legend"><span><i class="swatch" aria-hidden="true"></i>Current, per supplied case</span><span><i class="swatch proposal" aria-hidden="true"></i>Proposed, not confirmed deployed</span></div>
+        <div class="branch" aria-label="Policy outcomes">
+          <article class="hold"><h3>Hold for human review</h3><p>Missing, unreachable, or changed source → held. Do not label verified. The partner source URL must not be silently replaced.</p></article>
+          <article class="eligible"><h3>Automated posting eligible</h3><p>Policy service decides eligibility. The supplied facts do not define all policy criteria or state that eligibility itself proves a source verified.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="boundaries-title">
+      <div class="section-head"><span class="section-no">02</span><h2 id="boundaries-title">Failure and ownership boundaries</h2></div>
+      <div class="facts">
+        <article class="fact"><h3><span class="badge current">Current</span>Queue exhaustion</h3><p>Retries use exponential backoff for up to six attempts. After that, the event enters a dead-letter queue. The source does not specify recovery ownership or replay behavior from that queue.</p></article>
+        <article class="fact"><h3><span class="badge proposal">Proposed</span>Evidence hold</h3><p>Missing, unreachable, or changed source is a review hold, not a verified state. Preserve the partner-supplied URL as received; any correction needs an explicit, auditable operator action.</p></article>
+        <article class="fact"><h3><span class="badge boundary">Security</span>Secret isolation</h3><p>The dashboard reads normalized event and review status, not the raw webhook secret. The reviewer asks how secrets are kept out of logs; no logging control is specified in the supplied design.</p></article>
+        <article class="fact"><h3><span class="badge open">Unresolved</span>Replay and duplicate posting</h3><p>There is no confirmed replay UI or idempotency guarantee for the proposed resolver. It is unknown whether replay can produce duplicate dashboard updates.</p></article>
+        <article class="fact wide"><h3><span class="badge proposal">Audit requirement</span>One event ID through final status</h3><p>Maintain a trace from receipt through normalization, resolution, policy outcome, any human review, and final dashboard status using the event ID. Exact storage, retention, and correlation mechanisms remain design decisions.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="owners-title">
+      <div class="section-head"><span class="section-no">03</span><h2 id="owners-title">Decision and ownership register</h2></div>
+      <p class="intro">Functional ownership is proposed to make the handoffs explicit; named people, teams, and escalation paths were not supplied.</p>
+      <table class="ownership">
+        <thead><tr><th>Boundary</th><th>Accountable function to assign</th><th>Open evidence or decision</th></tr></thead>
+        <tbody>
+          <tr><td>Receipt and queue</td><td>Webhook / queue operations owner</td><td>Define how event ID is retained across retries and dead-letter handling.</td></tr>
+          <tr><td>Source evidence</td><td>Resolver owner</td><td>Define what “changed” compares against, URL handling, timeout behavior, and audit fields. Preserve the partner URL.</td></tr>
+          <tr><td>Eligibility policy</td><td>Policy owner</td><td>Publish the eligibility criteria and the allowed status transitions; do not equate a hold with verification.</td></tr>
+          <tr><td>False hold correction</td><td>Human review / operations owner</td><td>Specify a correction path, authorization, reason capture, and event-ID audit trail. The current proposal does not define the UI or workflow.</td></tr>
+          <tr><td>Dashboard side effect</td><td>Dashboard integration owner</td><td>Decide how repeated delivery is recognized and whether update writes are idempotent before enabling replay.</td></tr>
+          <tr><td>Secret handling</td><td>Security and service owners</td><td>Specify redaction and logging controls, then verify that raw webhook secrets cannot enter logs or dashboard reads.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="questions-title">
+      <div class="section-head"><span class="section-no">04</span><h2 id="questions-title">Questions to close before implementation</h2></div>
+      <div class="decision-grid">
+        <article class="decision"><h3>How are secrets kept out of logs?</h3><p>Set a logging and redaction contract at receipt and downstream boundaries. The supplied facts state the dashboard read boundary, but do not confirm log controls.</p></article>
+        <article class="decision"><h3>How can an operator correct a false hold?</h3><p>Define an authorized review action that records the operator, reason, source URL treatment, and outcome against the same event ID. The mechanism is open.</p></article>
+        <article class="decision"><h3>Can replay duplicate dashboard updates?</h3><p>Unknown. Confirm resolver and dashboard write idempotency behavior, then define replay semantics and duplicate detection before offering replay.</p></article>
+        <article class="decision"><h3>Where does auditable state live?</h3><p>Database and deployment topology are not selected. Choose them after defining event-ID traceability, status history, and ownership across the pipeline.</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="guardrail-title">
+      <div class="section-head"><span class="section-no">05</span><h2 id="guardrail-title">Review guardrail</h2></div>
+      <div class="notice"><strong>Proposal, not deployment evidence.</strong>The resolver and policy service are proposed additions. Replay UI, resolver idempotency, database, deployment topology, log-secret controls, and the false-hold correction workflow remain unconfirmed or undecided. Do not describe these controls as already operating.</div>
+    </section>
+
+    <footer><span>Prepared only from supplied fictional benchmark facts.</span><span>Architecture review · Current and proposed states labeled</span></footer>
+  </main>
+</body>
+</html>
