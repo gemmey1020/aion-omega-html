@@ -1,0 +1,46 @@
+{
+  "id": "evidence.evidence-ledger",
+  "family": "evidence",
+  "roles": [
+    "evidence",
+    "ledger",
+    "source register"
+  ],
+  "best_for": [
+    "many evidence items need scan-friendly grouping by status and a short interpretation"
+  ],
+  "avoid_when": [
+    "only one or two claims need a direct proof pair"
+  ],
+  "density": "medium-high",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "grouping",
+    "source metadata",
+    "status vocabulary",
+    "summary placement"
+  ],
+  "profile_affinity": [
+    "silver",
+    "cyan"
+  ],
+  "profiles": [
+    "silver",
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "management",
+    "founder"
+  ],
+  "keywords": [
+    "ledger",
+    "evidence",
+    "sources",
+    "status"
+  ],
+  "reference": "reference.html"
+}

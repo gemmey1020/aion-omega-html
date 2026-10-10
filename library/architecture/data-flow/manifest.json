@@ -1,0 +1,47 @@
+{
+  "id": "architecture.data-flow",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "data flow",
+    "provenance"
+  ],
+  "best_for": [
+    "readers need to see how source data becomes a result with provenance"
+  ],
+  "avoid_when": [
+    "the primary question is responsibility ownership by layer"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS",
+    "SVG"
+  ],
+  "variant_axes": [
+    "source count",
+    "transformation stages",
+    "provenance labels",
+    "failure branches"
+  ],
+  "profile_affinity": [
+    "cyan",
+    "prime"
+  ],
+  "profiles": [
+    "cyan",
+    "prime"
+  ],
+  "audiences": [
+    "technical",
+    "engineering",
+    "founder"
+  ],
+  "keywords": [
+    "data-flow",
+    "provenance",
+    "source",
+    "architecture"
+  ],
+  "reference": "reference.html"
+}

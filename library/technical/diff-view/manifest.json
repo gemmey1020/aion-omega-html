@@ -1,0 +1,46 @@
+{
+  "id": "technical.diff-view",
+  "family": "technical",
+  "roles": [
+    "technical",
+    "diff",
+    "change review"
+  ],
+  "best_for": [
+    "a small source change needs a side-by-side readable review with no scripting"
+  ],
+  "avoid_when": [
+    "the diff is huge or needs interactive navigation"
+  ],
+  "density": "compact",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "line count",
+    "context lines",
+    "change severity",
+    "file label"
+  ],
+  "profile_affinity": [
+    "silver",
+    "cyan"
+  ],
+  "profiles": [
+    "silver",
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "engineering",
+    "founder"
+  ],
+  "keywords": [
+    "diff",
+    "change",
+    "review",
+    "patch"
+  ],
+  "reference": "reference.html"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "risk.severity-ladder",
+  "family": "risk",
+  "roles": [
+    "risk",
+    "severity",
+    "escalation"
+  ],
+  "best_for": [
+    "risks need ordered severity, trigger, and a concrete response"
+  ],
+  "avoid_when": [
+    "the content is a general project status with no risk differentiation"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "severity levels",
+    "trigger clarity",
+    "owner",
+    "response detail"
+  ],
+  "profile_affinity": [
+    "silver",
+    "gold"
+  ],
+  "profiles": [
+    "silver",
+    "gold"
+  ],
+  "audiences": [
+    "management",
+    "technical",
+    "founder"
+  ],
+  "keywords": [
+    "risk",
+    "severity",
+    "ladder",
+    "mitigation"
+  ],
+  "reference": "reference.html"
+}

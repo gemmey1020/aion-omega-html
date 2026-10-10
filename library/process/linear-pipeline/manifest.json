@@ -1,0 +1,47 @@
+{
+  "id": "process.linear-pipeline",
+  "family": "process",
+  "roles": [
+    "process",
+    "pipeline",
+    "sequence"
+  ],
+  "best_for": [
+    "a small ordered workflow needs clear handoffs and entry/exit conditions"
+  ],
+  "avoid_when": [
+    "the flow branches repeatedly or requires live interaction"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS",
+    "SVG"
+  ],
+  "variant_axes": [
+    "stage count",
+    "handoff labels",
+    "gate emphasis",
+    "direction"
+  ],
+  "profile_affinity": [
+    "cyan",
+    "prime"
+  ],
+  "profiles": [
+    "cyan",
+    "prime"
+  ],
+  "audiences": [
+    "technical",
+    "operations",
+    "founder"
+  ],
+  "keywords": [
+    "linear",
+    "pipeline",
+    "process",
+    "stages"
+  ],
+  "reference": "reference.html"
+}

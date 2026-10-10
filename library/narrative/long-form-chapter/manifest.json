@@ -1,0 +1,46 @@
+{
+  "id": "narrative.long-form-chapter",
+  "family": "narrative",
+  "roles": [
+    "narrative",
+    "long-form",
+    "analysis"
+  ],
+  "best_for": [
+    "the argument needs context, evidence, and interpretation in a sustained reading flow"
+  ],
+  "avoid_when": [
+    "the reader needs a quick operational dashboard or metric scan"
+  ],
+  "density": "low",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "chapter length",
+    "pull quote",
+    "evidence placement",
+    "section cadence"
+  ],
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "chapter",
+    "narrative",
+    "analysis",
+    "context"
+  ],
+  "reference": "reference.html"
+}

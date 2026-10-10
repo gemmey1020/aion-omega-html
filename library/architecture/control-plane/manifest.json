@@ -1,0 +1,47 @@
+{
+  "id": "architecture.control-plane",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "control plane",
+    "runtime"
+  ],
+  "best_for": [
+    "policy decisions and runtime execution must be separated clearly"
+  ],
+  "avoid_when": [
+    "there is one simple component with no control/runtime boundary"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS",
+    "SVG"
+  ],
+  "variant_axes": [
+    "policy actors",
+    "execution nodes",
+    "feedback paths",
+    "boundary labels"
+  ],
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "technical",
+    "engineering",
+    "founder"
+  ],
+  "keywords": [
+    "control-plane",
+    "runtime",
+    "policy",
+    "architecture"
+  ],
+  "reference": "reference.html"
+}

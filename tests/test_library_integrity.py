@@ -140,3 +140,17 @@ def test_valid_minimal_fixture_passes(tmp_path):
     result = run_validator(tmp_path)
 
     assert result.returncode == 0, result.stdout + result.stderr
+
+
+def test_pov_corpus_has_exactly_27_unique_patterns():
+    manifests = list((ROOT / "library").rglob("manifest.json"))
+    entries = [
+        json.loads(line)
+        for line in (ROOT / "index" / "catalog.ndjson").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
+    assert len(manifests) == 27
+    assert len(entries) == 27
+    assert len({json.loads(path.read_text(encoding="utf-8"))["id"] for path in manifests}) == 27
+    assert len({entry["id"] for entry in entries}) == 27

@@ -1,0 +1,46 @@
+{
+  "id": "evidence.claim-proof",
+  "family": "evidence",
+  "roles": [
+    "evidence",
+    "claim",
+    "proof"
+  ],
+  "best_for": [
+    "a few claims need direct evidence links and explicit limits"
+  ],
+  "avoid_when": [
+    "the reader needs a dense chronology across many events"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "claim count",
+    "source form",
+    "limit prominence",
+    "confidence label"
+  ],
+  "profile_affinity": [
+    "silver",
+    "prime"
+  ],
+  "profiles": [
+    "silver",
+    "prime"
+  ],
+  "audiences": [
+    "founder",
+    "technical",
+    "management"
+  ],
+  "keywords": [
+    "claim",
+    "proof",
+    "source",
+    "boundary"
+  ],
+  "reference": "reference.html"
+}

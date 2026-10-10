@@ -1,0 +1,46 @@
+{
+  "id": "technical.execution-trace",
+  "family": "technical",
+  "roles": [
+    "technical",
+    "execution trace",
+    "runtime"
+  ],
+  "best_for": [
+    "a bounded run needs ordered events with inputs, outputs, and final state"
+  ],
+  "avoid_when": [
+    "the reader needs a high-level roadmap"
+  ],
+  "density": "compact",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "event count",
+    "timestamps",
+    "trace identifiers",
+    "failure emphasis"
+  ],
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "technical",
+    "engineering",
+    "operations"
+  ],
+  "keywords": [
+    "trace",
+    "execution",
+    "runtime",
+    "sequence"
+  ],
+  "reference": "reference.html"
+}

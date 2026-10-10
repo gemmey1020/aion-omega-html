@@ -1,0 +1,47 @@
+{
+  "id": "architecture.layered",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "layers",
+    "system boundary"
+  ],
+  "best_for": [
+    "a system is best explained as responsibility layers and their boundaries"
+  ],
+  "avoid_when": [
+    "the important story is a changing event sequence"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS",
+    "SVG"
+  ],
+  "variant_axes": [
+    "layer count",
+    "boundary labels",
+    "external actors",
+    "risk callouts"
+  ],
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "technical",
+    "founder",
+    "engineering"
+  ],
+  "keywords": [
+    "layered",
+    "architecture",
+    "boundary",
+    "system"
+  ],
+  "reference": "reference.html"
+}

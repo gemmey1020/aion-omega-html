@@ -1,0 +1,46 @@
+{
+  "id": "process.human-in-loop",
+  "family": "process",
+  "roles": [
+    "process",
+    "human review",
+    "approval"
+  ],
+  "best_for": [
+    "automation prepares a result but a named person must review an exception"
+  ],
+  "avoid_when": [
+    "the workflow has no meaningful human judgment or exception"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "review point",
+    "owner",
+    "exception threshold",
+    "approval evidence"
+  ],
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "management",
+    "operations",
+    "founder"
+  ],
+  "keywords": [
+    "human",
+    "review",
+    "approval",
+    "handoff"
+  ],
+  "reference": "reference.html"
+}

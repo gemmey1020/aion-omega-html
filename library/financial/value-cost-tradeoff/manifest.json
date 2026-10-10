@@ -1,0 +1,46 @@
+{
+  "id": "financial.value-cost-tradeoff",
+  "family": "financial",
+  "roles": [
+    "financial",
+    "value-cost",
+    "tradeoff"
+  ],
+  "best_for": [
+    "an executive needs the value hypothesis and bounded cost/risk stated together"
+  ],
+  "avoid_when": [
+    "the input lacks a defensible value case or cost basis"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "value horizon",
+    "cost categories",
+    "scenario count",
+    "assumption visibility"
+  ],
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "executive",
+    "founder",
+    "management"
+  ],
+  "keywords": [
+    "value",
+    "cost",
+    "tradeoff",
+    "investment"
+  ],
+  "reference": "reference.html"
+}
