@@ -47,12 +47,13 @@ def _relative(path: Path, root: Path) -> str:
         return str(path)
 
 
-def _read_profile_ids(root: Path, errors: list[str]) -> set[str]:
+def _read_profile_ids(root: Path, errors: list[str]) -> tuple[set[str], dict[str, list[str]]]:
     profiles_dir = root / "profiles"
     profile_ids = set()
+    representation_affinities: dict[str, list[str]] = {}
     if not profiles_dir.is_dir():
         errors.append("missing profiles directory: profiles")
-        return profile_ids
+        return profile_ids, representation_affinities
 
     for path in sorted(profiles_dir.glob("*.json")):
         try:
@@ -67,14 +68,19 @@ def _read_profile_ids(root: Path, errors: list[str]) -> set[str]:
         if profile_id in profile_ids:
             errors.append(f"duplicate profile id: {profile_id}")
         profile_ids.add(profile_id)
-    return profile_ids
+        affinity = profile.get("representation_affinity", []) if isinstance(profile, dict) else []
+        if not isinstance(affinity, list):
+            errors.append(f"profile representation_affinity must be a list at {_relative(path, root)}")
+            affinity = []
+        representation_affinities[profile_id] = affinity
+    return profile_ids, representation_affinities
 
 
 def validate_library(root: Path) -> list[str]:
     """Return validation errors for the library and catalog beneath ``root``."""
     root = Path(root).resolve()
     errors: list[str] = []
-    profile_ids = _read_profile_ids(root, errors)
+    profile_ids, representation_affinities = _read_profile_ids(root, errors)
     library_dir = root / "library"
     if not library_dir.is_dir():
         errors.append("missing library directory: library")
@@ -164,14 +170,28 @@ def validate_library(root: Path) -> list[str]:
             continue
         seen_manifest_paths.add(manifest_path)
         manifest = by_path[manifest_path]
-        if entry_id != manifest.get("id"):
-            errors.append(
-                f"catalog id {entry_id!r} does not match manifest id {manifest.get('id')!r} at {_relative(manifest_path, root)}"
-            )
+        for catalog_field, manifest_field in (
+            ("id", "id"),
+            ("family", "family"),
+            ("roles", "roles"),
+            ("density", "density"),
+            ("motion", "motion"),
+            ("profiles", "profile_affinity"),
+        ):
+            if entry.get(catalog_field) != manifest.get(manifest_field):
+                errors.append(
+                    f"catalog {catalog_field} does not match manifest {manifest_field} at {_relative(manifest_path, root)}"
+                )
 
     for path in by_path:
         if path not in seen_manifest_paths:
             errors.append(f"manifest not indexed in catalog: {_relative(path, root)}")
+    for profile_id, pattern_ids in representation_affinities.items():
+        for pattern_id in pattern_ids:
+            if not isinstance(pattern_id, str) or pattern_id not in seen_catalog_ids:
+                errors.append(
+                    f"invalid representation_affinity pattern ID {pattern_id!r} for profile {profile_id}"
+                )
     return errors
 
 

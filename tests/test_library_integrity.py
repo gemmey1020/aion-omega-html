@@ -3,6 +3,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[1]
 VALID_MANIFEST = {
     "id": "hero.sample",
@@ -140,6 +142,44 @@ def test_valid_minimal_fixture_passes(tmp_path):
     result = run_validator(tmp_path)
 
     assert result.returncode == 0, result.stdout + result.stderr
+
+
+@pytest.mark.parametrize(
+    ("field", "value", "expected_name"),
+    [
+        ("id", "hero.other", "id"),
+        ("family", "summary", "family"),
+        ("roles", ["decision"], "roles"),
+        ("density", "compact", "density"),
+        ("motion", "high", "motion"),
+        ("profiles", ["gold"], "profile_affinity"),
+    ],
+)
+def test_catalog_manifest_metadata_drift_names_the_field(tmp_path, field, value, expected_name):
+    pattern_dir = write_pattern(tmp_path)
+    entry = catalog_entry(tmp_path, pattern_dir)
+    entry[field] = value
+    write_catalog(tmp_path, [entry])
+
+    result = run_validator(tmp_path)
+
+    output = result.stdout.lower() + result.stderr.lower()
+    assert result.returncode != 0
+    assert expected_name in output
+
+
+def test_profile_representation_affinity_must_reference_catalog_id(tmp_path):
+    pattern_dir = write_pattern(tmp_path)
+    prime_path = tmp_path / "profiles" / "prime.json"
+    prime_path.write_text(json.dumps({"id": "prime", "representation_affinity": ["hero.unknown"]}), encoding="utf-8")
+    write_catalog(tmp_path, [catalog_entry(tmp_path, pattern_dir)])
+
+    result = run_validator(tmp_path)
+
+    output = result.stdout.lower() + result.stderr.lower()
+    assert result.returncode != 0
+    assert "representation_affinity" in output
+    assert "hero.unknown" in output
 
 
 def test_pov_corpus_has_exactly_27_unique_patterns():
