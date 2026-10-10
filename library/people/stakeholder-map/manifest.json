@@ -1,0 +1,48 @@
+{
+  "id": "people.stakeholder-map",
+  "family": "people",
+  "roles": [
+    "stakeholder map",
+    "influence",
+    "impact",
+    "engagement"
+  ],
+  "best_for": [
+    "a decision owner needs stakeholder impact, influence, concerns and engagement steps"
+  ],
+  "avoid_when": [
+    "placement implies unsupported personal judgement or discloses an unapproved identity"
+  ],
+  "density": "low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "stakeholder count",
+    "impact scale",
+    "influence scale",
+    "engagement cadence"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "executive",
+    "management",
+    "client"
+  ],
+  "keywords": [
+    "stakeholder",
+    "influence",
+    "impact",
+    "engagement",
+    "concern"
+  ]
+}

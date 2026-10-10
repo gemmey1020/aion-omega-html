@@ -1,0 +1,48 @@
+{
+  "id": "people.raci",
+  "family": "people",
+  "roles": [
+    "RACI",
+    "responsibility",
+    "role clarity",
+    "consultation"
+  ],
+  "best_for": [
+    "a team must distinguish who works, owns, advises and receives updates"
+  ],
+  "avoid_when": [
+    "multiple accountable owners are unresolved or roles hide an approval conflict"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "role count",
+    "task count",
+    "decision authority",
+    "consultation depth"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "team",
+    "management",
+    "operations"
+  ],
+  "keywords": [
+    "RACI",
+    "responsible",
+    "accountable",
+    "consulted",
+    "informed"
+  ]
+}

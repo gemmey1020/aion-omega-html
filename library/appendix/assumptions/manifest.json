@@ -1,0 +1,48 @@
+{
+  "id": "appendix.assumptions",
+  "family": "appendix",
+  "roles": [
+    "assumptions",
+    "unknowns",
+    "validation",
+    "scope boundary"
+  ],
+  "best_for": [
+    "unresolved assumptions need owners, validation steps and explicit status"
+  ],
+  "avoid_when": [
+    "an assumption is stated as fact or verified sources are required instead"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "assumption count",
+    "urgency",
+    "dependencies",
+    "confidence labels"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver",
+    "prime"
+  ],
+  "audiences": [
+    "founder",
+    "audit",
+    "management"
+  ],
+  "keywords": [
+    "assumptions",
+    "unknowns",
+    "validation",
+    "owner",
+    "scope"
+  ]
+}

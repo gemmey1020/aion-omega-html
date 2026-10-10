@@ -1,0 +1,48 @@
+{
+  "id": "operational.runbook",
+  "family": "operational",
+  "roles": [
+    "procedure",
+    "operations",
+    "preflight",
+    "verification"
+  ],
+  "best_for": [
+    "a bounded procedure needs prerequisites, checks, stop conditions and recovery guidance"
+  ],
+  "avoid_when": [
+    "the procedure is unverified or implies an uncontrolled production change"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "step count",
+    "risk",
+    "check type",
+    "recovery path"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "silver"
+  ],
+  "audiences": [
+    "operations",
+    "engineering",
+    "audit"
+  ],
+  "keywords": [
+    "runbook",
+    "procedure",
+    "preflight",
+    "verification",
+    "stop condition"
+  ]
+}

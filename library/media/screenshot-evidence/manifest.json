@@ -1,0 +1,49 @@
+{
+  "id": "media.screenshot-evidence",
+  "family": "media",
+  "roles": [
+    "screenshot evidence",
+    "capture",
+    "viewport",
+    "provenance"
+  ],
+  "best_for": [
+    "a reviewer needs screenshot scope, viewport, time, artifact path and verification status"
+  ],
+  "avoid_when": [
+    "screenshots expose private data or claim results without proof"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "capture count",
+    "viewport mix",
+    "annotation",
+    "verification status"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "engineering",
+    "audit",
+    "management"
+  ],
+  "keywords": [
+    "screenshot",
+    "capture",
+    "viewport",
+    "provenance",
+    "hash",
+    "visual QA"
+  ]
+}

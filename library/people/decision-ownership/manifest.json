@@ -1,0 +1,49 @@
+{
+  "id": "people.decision-ownership",
+  "family": "people",
+  "roles": [
+    "decision ownership",
+    "approval",
+    "owner",
+    "input"
+  ],
+  "best_for": [
+    "the decision owner, input roles, approval boundary and record must be explicit"
+  ],
+  "avoid_when": [
+    "formal delegation is unknown or authority is inferred from seniority"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "decision count",
+    "approval levels",
+    "input roles",
+    "record detail"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold",
+    "silver"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "audit"
+  ],
+  "keywords": [
+    "decision ownership",
+    "approval",
+    "accountability",
+    "record"
+  ]
+}

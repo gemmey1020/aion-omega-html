@@ -1,0 +1,48 @@
+{
+  "id": "media.visual-comparison",
+  "family": "media",
+  "roles": [
+    "visual comparison",
+    "baseline",
+    "candidate",
+    "change"
+  ],
+  "best_for": [
+    "a reviewer needs a controlled visual comparison with matching viewport and source state"
+  ],
+  "avoid_when": [
+    "baseline and candidate differ in viewport, content or source version"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "comparison count",
+    "viewport",
+    "annotation",
+    "difference type"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "cyan"
+  ],
+  "audiences": [
+    "executive",
+    "client",
+    "engineering"
+  ],
+  "keywords": [
+    "visual comparison",
+    "before after",
+    "baseline",
+    "viewport",
+    "change"
+  ]
+}

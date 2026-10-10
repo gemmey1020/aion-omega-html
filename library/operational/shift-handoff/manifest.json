@@ -1,0 +1,48 @@
+{
+  "id": "operational.shift-handoff",
+  "family": "operational",
+  "roles": [
+    "handoff",
+    "shift change",
+    "continuity",
+    "watchlist"
+  ],
+  "best_for": [
+    "the incoming operator needs completed work, live state, watchouts and a next action"
+  ],
+  "avoid_when": [
+    "a live incident requires a dedicated escalation protocol or credentials would be exposed"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "shift overlap",
+    "watchout count",
+    "handoff depth",
+    "escalation"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "cyan"
+  ],
+  "audiences": [
+    "operations",
+    "support",
+    "management"
+  ],
+  "keywords": [
+    "shift handoff",
+    "completed",
+    "watchout",
+    "next owner",
+    "continuity"
+  ]
+}

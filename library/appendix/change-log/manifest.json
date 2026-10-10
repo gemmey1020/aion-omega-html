@@ -1,0 +1,48 @@
+{
+  "id": "appendix.change-log",
+  "family": "appendix",
+  "roles": [
+    "change log",
+    "revision history",
+    "rationale",
+    "impact"
+  ],
+  "best_for": [
+    "reviewers need what changed, why, who reviewed and downstream impact"
+  ],
+  "avoid_when": [
+    "changes lack version linkage or expose private author data"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver",
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "revision count",
+    "change scope",
+    "impact",
+    "review status"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver",
+    "cyan"
+  ],
+  "audiences": [
+    "audit",
+    "engineering",
+    "management"
+  ],
+  "keywords": [
+    "change log",
+    "revision",
+    "rationale",
+    "impact",
+    "reviewer"
+  ]
+}

@@ -182,7 +182,7 @@ def test_profile_representation_affinity_must_reference_catalog_id(tmp_path):
     assert "hero.unknown" in output
 
 
-def test_pov_corpus_has_exactly_57_patterns_including_wave_e_and_f_ids():
+def test_pov_corpus_has_exactly_72_patterns_including_wave_e_f_and_g_ids():
     wave_e_ids = {
         "hero.minimal-document",
         "hero.quote-led",
@@ -217,6 +217,23 @@ def test_pov_corpus_has_exactly_57_patterns_including_wave_e_and_f_ids():
         "risk.risk-matrix",
         "technical.api-exchange",
     }
+    wave_g_ids = {
+        "operational.runbook",
+        "operational.action-queue",
+        "operational.shift-handoff",
+        "people.raci",
+        "people.stakeholder-map",
+        "people.decision-ownership",
+        "media.screenshot-evidence",
+        "media.annotated-image",
+        "media.visual-comparison",
+        "appendix.sources",
+        "appendix.assumptions",
+        "appendix.change-log",
+        "technical.schema-panel",
+        "financial.pricing-matrix",
+        "risk.readiness-board",
+    }
     manifests = list((ROOT / "library").rglob("manifest.json"))
     manifest_ids = {json.loads(path.read_text(encoding="utf-8"))["id"] for path in manifests}
     entries = [
@@ -226,11 +243,42 @@ def test_pov_corpus_has_exactly_57_patterns_including_wave_e_and_f_ids():
     ]
     catalog_ids = {entry["id"] for entry in entries}
 
-    assert len(manifests) == 57
-    assert len(entries) == 57
-    assert len(manifest_ids) == 57
-    assert len(catalog_ids) == 57
+    assert len(manifests) == 72
+    assert len(entries) == 72
+    assert len(manifest_ids) == 72
+    assert len(catalog_ids) == 72
+    assert catalog_ids == manifest_ids
     assert wave_e_ids <= manifest_ids
     assert wave_e_ids <= catalog_ids
     assert wave_f_ids <= manifest_ids
     assert wave_f_ids <= catalog_ids
+    assert wave_g_ids <= manifest_ids
+    assert wave_g_ids <= catalog_ids
+
+
+def test_corpus_covers_all_required_representation_families():
+    required_families = {
+        "hero",
+        "summary",
+        "metric",
+        "comparison",
+        "timeline",
+        "process",
+        "architecture",
+        "evidence",
+        "risk",
+        "decision",
+        "narrative",
+        "technical",
+        "operational",
+        "people",
+        "financial",
+        "media",
+        "appendix",
+    }
+    manifest_families = {
+        json.loads(path.read_text(encoding="utf-8"))["family"]
+        for path in (ROOT / "library").rglob("manifest.json")
+    }
+
+    assert required_families <= manifest_families

@@ -1,0 +1,50 @@
+{
+  "id": "financial.pricing-matrix",
+  "family": "financial",
+  "roles": [
+    "pricing matrix",
+    "commercial options",
+    "scope",
+    "cost comparison"
+  ],
+  "best_for": [
+    "a buyer needs comparable options, units, inclusions, exclusions and payment basis"
+  ],
+  "avoid_when": [
+    "scope, currency, tax treatment or recurring obligations are unconfirmed"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "option count",
+    "billing basis",
+    "scope depth",
+    "currency"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "client",
+    "executive",
+    "founder"
+  ],
+  "keywords": [
+    "pricing",
+    "commercial options",
+    "EGP",
+    "scope",
+    "included",
+    "excluded",
+    "recurring"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "technical.schema-panel",
+  "family": "technical",
+  "roles": [
+    "schema",
+    "field types",
+    "constraints",
+    "data contract"
+  ],
+  "best_for": [
+    "a reader needs field names, types, requiredness, constraints and validation boundaries"
+  ],
+  "avoid_when": [
+    "the schema version is unconfirmed or sample payloads expose sensitive data"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "field count",
+    "nesting depth",
+    "constraints",
+    "payload length"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "engineering",
+    "audit",
+    "technical"
+  ],
+  "keywords": [
+    "schema",
+    "field type",
+    "required",
+    "constraint",
+    "JSON"
+  ]
+}

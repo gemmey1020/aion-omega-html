@@ -1,0 +1,47 @@
+{
+  "id": "media.annotated-image",
+  "family": "media",
+  "roles": [
+    "annotated image",
+    "callout",
+    "visual evidence",
+    "location"
+  ],
+  "best_for": [
+    "a reviewer must connect each visual region to evidence and uncertainty"
+  ],
+  "avoid_when": [
+    "callouts obscure the original image or locations cannot be reproduced"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "callout count",
+    "image aspect ratio",
+    "region shape",
+    "annotation density"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "audit",
+    "engineering",
+    "client"
+  ],
+  "keywords": [
+    "annotated image",
+    "callout",
+    "region",
+    "source link"
+  ]
+}

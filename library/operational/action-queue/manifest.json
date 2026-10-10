@@ -1,0 +1,48 @@
+{
+  "id": "operational.action-queue",
+  "family": "operational",
+  "roles": [
+    "action queue",
+    "priority",
+    "owner",
+    "due date"
+  ],
+  "best_for": [
+    "prioritized work needs owners, deadlines, blockers and completion evidence"
+  ],
+  "avoid_when": [
+    "items have no owner or dates may be mistaken for commitments"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "priority scale",
+    "owner count",
+    "deadline precision",
+    "dependencies"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "operations",
+    "management",
+    "founder"
+  ],
+  "keywords": [
+    "action queue",
+    "priority",
+    "owner",
+    "due date",
+    "blocker"
+  ]
+}

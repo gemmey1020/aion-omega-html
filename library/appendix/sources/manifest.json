@@ -1,0 +1,48 @@
+{
+  "id": "appendix.sources",
+  "family": "appendix",
+  "roles": [
+    "sources",
+    "citation",
+    "provenance",
+    "reference index"
+  ],
+  "best_for": [
+    "readers need resolvable references linked to owners, dates, versions and claim limits"
+  ],
+  "avoid_when": [
+    "citations cannot be opened or dates are inferred"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "source count",
+    "citation format",
+    "confidence detail",
+    "claim mapping"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver",
+    "gold"
+  ],
+  "audiences": [
+    "audit",
+    "executive",
+    "research"
+  ],
+  "keywords": [
+    "sources",
+    "citation",
+    "provenance",
+    "claim link",
+    "date"
+  ]
+}

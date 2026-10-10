@@ -1,0 +1,51 @@
+{
+  "id": "risk.readiness-board",
+  "family": "risk",
+  "roles": [
+    "readiness board",
+    "gate",
+    "owner",
+    "evidence status"
+  ],
+  "best_for": [
+    "a release owner needs proof, owners, blockers and next actions for each gate"
+  ],
+  "avoid_when": [
+    "readiness is inferred from one aggregate score or a blocked gate is hidden"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver",
+    "gold",
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "gate count",
+    "readiness state",
+    "proof requirement",
+    "blocker severity"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver",
+    "gold",
+    "cyan"
+  ],
+  "audiences": [
+    "founder",
+    "engineering",
+    "audit"
+  ],
+  "keywords": [
+    "readiness",
+    "release gate",
+    "blocker",
+    "owner",
+    "evidence",
+    "go no-go"
+  ]
+}
