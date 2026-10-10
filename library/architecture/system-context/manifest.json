@@ -1,0 +1,46 @@
+{
+  "id": "architecture.system-context",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "system context",
+    "actors",
+    "boundary"
+  ],
+  "best_for": [
+    "a reader needs the system, external actors, exchanged information and explicit trust boundary in one view"
+  ],
+  "avoid_when": [
+    "the architecture has many runtime stages or the relationships are not evidenced"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "actor count",
+    "boundary scope",
+    "flow direction",
+    "external dependency count"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "executive",
+    "management"
+  ],
+  "keywords": [
+    "system context",
+    "architecture",
+    "actors",
+    "boundary",
+    "information flow"
+  ]
+}

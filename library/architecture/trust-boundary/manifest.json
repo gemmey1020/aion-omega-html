@@ -1,0 +1,50 @@
+{
+  "id": "architecture.trust-boundary",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "trust boundary",
+    "data flow",
+    "control"
+  ],
+  "best_for": [
+    "a review must show which data crosses trust zones and what validation or approval applies at each boundary"
+  ],
+  "avoid_when": [
+    "the zones and controls are unknown or the page would expose sensitive values"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "zone count",
+    "data sensitivity",
+    "control count",
+    "approval boundary"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "technical",
+    "audit",
+    "security",
+    "management"
+  ],
+  "keywords": [
+    "trust boundary",
+    "data flow",
+    "validation",
+    "approval",
+    "security",
+    "zone"
+  ]
+}

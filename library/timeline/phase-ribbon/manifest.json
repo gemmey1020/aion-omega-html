@@ -1,0 +1,49 @@
+{
+  "id": "timeline.phase-ribbon",
+  "family": "timeline",
+  "roles": [
+    "timeline",
+    "phase ribbon",
+    "milestone",
+    "deliverable"
+  ],
+  "best_for": [
+    "an executive needs phase order, current position, next deliverable and decision gate without exact dates"
+  ],
+  "avoid_when": [
+    "timestamp precision is essential or phases have complex branching"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "phase count",
+    "current phase",
+    "gate position",
+    "deliverable detail"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "executive",
+    "founder",
+    "client"
+  ],
+  "keywords": [
+    "phase",
+    "ribbon",
+    "milestone",
+    "roadmap",
+    "deliverable",
+    "gate"
+  ]
+}

@@ -30,7 +30,15 @@
     "evidence.claim-proof",
     "evidence.evidence-ledger",
     "timeline.evidence-timeline",
-    "technical.diff-view"
+    "technical.diff-view",
+    "architecture.trust-boundary",
+    "process.branching-flow",
+    "process.approval-chain",
+    "timeline.vertical-chronology",
+    "evidence.source-matrix",
+    "evidence.confidence-bands",
+    "evidence.contradiction-view",
+    "risk.risk-matrix"
   ],
   "anti_patterns": [
     "turning every section into a table",

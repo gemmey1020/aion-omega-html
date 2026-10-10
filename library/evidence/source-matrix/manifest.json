@@ -1,0 +1,47 @@
+{
+  "id": "evidence.source-matrix",
+  "family": "evidence",
+  "roles": [
+    "evidence",
+    "source matrix",
+    "claim traceability",
+    "coverage"
+  ],
+  "best_for": [
+    "several claims need a compact source, method, coverage and validation status cross-reference"
+  ],
+  "avoid_when": [
+    "sources are not comparable or the table would conceal narrative context"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "claim count",
+    "source count",
+    "coverage detail",
+    "validation status"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver"
+  ],
+  "audiences": [
+    "audit",
+    "executive",
+    "research"
+  ],
+  "keywords": [
+    "source matrix",
+    "claim",
+    "evidence",
+    "coverage",
+    "validation",
+    "traceability"
+  ]
+}

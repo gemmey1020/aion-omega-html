@@ -1,0 +1,49 @@
+{
+  "id": "timeline.evolution-ladder",
+  "family": "timeline",
+  "roles": [
+    "timeline",
+    "evolution ladder",
+    "maturity",
+    "proof"
+  ],
+  "best_for": [
+    "a technical or strategy audience needs capability progression tied to evidence required at each level"
+  ],
+  "avoid_when": [
+    "maturity levels have no agreed definitions or progression is not sequential"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "level count",
+    "proof threshold",
+    "current level",
+    "next capability"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan",
+    "prime"
+  ],
+  "audiences": [
+    "technical",
+    "founder",
+    "executive"
+  ],
+  "keywords": [
+    "evolution",
+    "maturity",
+    "ladder",
+    "capability",
+    "proof",
+    "progression"
+  ]
+}

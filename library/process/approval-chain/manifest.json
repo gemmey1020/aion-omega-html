@@ -1,0 +1,47 @@
+{
+  "id": "process.approval-chain",
+  "family": "process",
+  "roles": [
+    "process",
+    "approval chain",
+    "owner",
+    "evidence gate"
+  ],
+  "best_for": [
+    "a governed decision requires sequential reviewers, an evidence item and explicit ownership at each approval"
+  ],
+  "avoid_when": [
+    "approval is parallel or the required authorities are not established"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "approval stage count",
+    "owner detail",
+    "evidence requirement",
+    "hold rule"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver"
+  ],
+  "audiences": [
+    "audit",
+    "management",
+    "executive"
+  ],
+  "keywords": [
+    "approval chain",
+    "reviewer",
+    "evidence",
+    "owner",
+    "sign off",
+    "governance"
+  ]
+}

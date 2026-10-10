@@ -1,0 +1,49 @@
+{
+  "id": "process.branching-flow",
+  "family": "process",
+  "roles": [
+    "process",
+    "branching flow",
+    "condition",
+    "outcome"
+  ],
+  "best_for": [
+    "an operational procedure has one explicit condition whose outcomes lead to different safe next steps"
+  ],
+  "avoid_when": [
+    "there are many nested decisions or branches have no owner"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "branch count",
+    "condition wording",
+    "owner per branch",
+    "terminal action"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "technical",
+    "operations",
+    "management"
+  ],
+  "keywords": [
+    "branching flow",
+    "condition",
+    "yes no",
+    "procedure",
+    "outcome",
+    "route"
+  ]
+}

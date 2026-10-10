@@ -1,0 +1,47 @@
+{
+  "id": "process.state-machine",
+  "family": "process",
+  "roles": [
+    "process",
+    "state machine",
+    "transition",
+    "guard"
+  ],
+  "best_for": [
+    "implementation or operations needs permitted state transitions, guards and terminal states stated exactly"
+  ],
+  "avoid_when": [
+    "the workflow is primarily chronological or transition rules are unknown"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "state count",
+    "transition count",
+    "guard detail",
+    "terminal state"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "operations",
+    "engineering"
+  ],
+  "keywords": [
+    "state machine",
+    "transition",
+    "guard",
+    "state",
+    "event",
+    "terminal"
+  ]
+}

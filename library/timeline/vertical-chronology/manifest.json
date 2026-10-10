@@ -1,0 +1,47 @@
+{
+  "id": "timeline.vertical-chronology",
+  "family": "timeline",
+  "roles": [
+    "timeline",
+    "vertical chronology",
+    "event evidence",
+    "source"
+  ],
+  "best_for": [
+    "an incident or review needs exact event times paired with source and confidence"
+  ],
+  "avoid_when": [
+    "timestamps are approximate but presented as exact or event order is disputed"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "event count",
+    "timestamp precision",
+    "source note",
+    "uncertainty marker"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver"
+  ],
+  "audiences": [
+    "audit",
+    "operations",
+    "executive"
+  ],
+  "keywords": [
+    "chronology",
+    "timeline",
+    "incident",
+    "timestamps",
+    "source",
+    "evidence"
+  ]
+}

@@ -182,7 +182,7 @@ def test_profile_representation_affinity_must_reference_catalog_id(tmp_path):
     assert "hero.unknown" in output
 
 
-def test_pov_corpus_has_exactly_42_patterns_including_all_wave_e_ids():
+def test_pov_corpus_has_exactly_57_patterns_including_wave_e_and_f_ids():
     wave_e_ids = {
         "hero.minimal-document",
         "hero.quote-led",
@@ -200,6 +200,23 @@ def test_pov_corpus_has_exactly_42_patterns_including_all_wave_e_ids():
         "comparison.before-after",
         "financial.investment-case",
     }
+    wave_f_ids = {
+        "architecture.system-context",
+        "architecture.runtime-lifecycle",
+        "architecture.dependency-map",
+        "architecture.trust-boundary",
+        "process.branching-flow",
+        "process.state-machine",
+        "process.approval-chain",
+        "timeline.vertical-chronology",
+        "timeline.phase-ribbon",
+        "timeline.evolution-ladder",
+        "evidence.source-matrix",
+        "evidence.confidence-bands",
+        "evidence.contradiction-view",
+        "risk.risk-matrix",
+        "technical.api-exchange",
+    }
     manifests = list((ROOT / "library").rglob("manifest.json"))
     manifest_ids = {json.loads(path.read_text(encoding="utf-8"))["id"] for path in manifests}
     entries = [
@@ -209,9 +226,11 @@ def test_pov_corpus_has_exactly_42_patterns_including_all_wave_e_ids():
     ]
     catalog_ids = {entry["id"] for entry in entries}
 
-    assert len(manifests) == 42
-    assert len(entries) == 42
-    assert len(manifest_ids) == 42
-    assert len(catalog_ids) == 42
+    assert len(manifests) == 57
+    assert len(entries) == 57
+    assert len(manifest_ids) == 57
+    assert len(catalog_ids) == 57
     assert wave_e_ids <= manifest_ids
     assert wave_e_ids <= catalog_ids
+    assert wave_f_ids <= manifest_ids
+    assert wave_f_ids <= catalog_ids

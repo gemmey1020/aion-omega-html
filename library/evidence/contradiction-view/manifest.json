@@ -1,0 +1,47 @@
+{
+  "id": "evidence.contradiction-view",
+  "family": "evidence",
+  "roles": [
+    "evidence",
+    "contradiction view",
+    "conflicting claims",
+    "resolution"
+  ],
+  "best_for": [
+    "two sources disagree and the reviewer must preserve both statements, context and the unresolved question"
+  ],
+  "avoid_when": [
+    "the apparent conflict comes from different scopes that can be separated cleanly"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "claim count",
+    "context fields",
+    "source age",
+    "resolution question"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver"
+  ],
+  "audiences": [
+    "audit",
+    "executive",
+    "research"
+  ],
+  "keywords": [
+    "contradiction",
+    "conflict",
+    "sources",
+    "disagreement",
+    "scope",
+    "evidence"
+  ]
+}

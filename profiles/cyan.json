@@ -31,7 +31,15 @@
     "architecture.control-plane",
     "architecture.data-flow",
     "process.linear-pipeline",
-    "technical.execution-trace"
+    "technical.execution-trace",
+    "architecture.system-context",
+    "architecture.runtime-lifecycle",
+    "architecture.dependency-map",
+    "architecture.trust-boundary",
+    "process.branching-flow",
+    "process.state-machine",
+    "timeline.evolution-ladder",
+    "technical.api-exchange"
   ],
   "anti_patterns": [
     "fake sci-fi HUD",

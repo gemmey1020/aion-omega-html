@@ -1,0 +1,48 @@
+{
+  "id": "technical.api-exchange",
+  "family": "technical",
+  "roles": [
+    "technical",
+    "API exchange",
+    "request response",
+    "contract"
+  ],
+  "best_for": [
+    "an engineering reader needs the request, response, status and failure semantics side by side"
+  ],
+  "avoid_when": [
+    "the payload is sensitive or the schema is not confirmed"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "method prominence",
+    "payload size",
+    "status code",
+    "error example"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "engineering",
+    "audit"
+  ],
+  "keywords": [
+    "API",
+    "request",
+    "response",
+    "endpoint",
+    "payload",
+    "status",
+    "contract"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "architecture.runtime-lifecycle",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "runtime lifecycle",
+    "stages",
+    "input output"
+  ],
+  "best_for": [
+    "a technical reader needs the ordered runtime stages with each stage's trigger, work and produced receipt"
+  ],
+  "avoid_when": [
+    "the workflow branches heavily or there is no reliable stage boundary"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "stage count",
+    "trigger detail",
+    "failure checkpoint",
+    "receipt visibility"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "management",
+    "operations"
+  ],
+  "keywords": [
+    "runtime",
+    "lifecycle",
+    "stages",
+    "input",
+    "output",
+    "receipt",
+    "execution"
+  ]
+}

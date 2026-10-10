@@ -1,0 +1,50 @@
+{
+  "id": "risk.risk-matrix",
+  "family": "risk",
+  "roles": [
+    "risk",
+    "risk matrix",
+    "likelihood",
+    "impact",
+    "mitigation"
+  ],
+  "best_for": [
+    "a small set of named risks needs likelihood, impact, owner and mitigation tied together"
+  ],
+  "avoid_when": [
+    "ratings have no agreed scale or a register is clearer than a matrix"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "scale definition",
+    "risk count",
+    "mitigation state",
+    "owner visibility"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver",
+    "gold"
+  ],
+  "audiences": [
+    "audit",
+    "executive",
+    "board"
+  ],
+  "keywords": [
+    "risk matrix",
+    "likelihood",
+    "impact",
+    "mitigation",
+    "owner",
+    "exposure"
+  ]
+}

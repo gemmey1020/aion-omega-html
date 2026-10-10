@@ -1,0 +1,47 @@
+{
+  "id": "evidence.confidence-bands",
+  "family": "evidence",
+  "roles": [
+    "evidence",
+    "confidence bands",
+    "uncertainty",
+    "claim assessment"
+  ],
+  "best_for": [
+    "a reviewer needs qualitative confidence levels with reasons and the specific evidence gap"
+  ],
+  "avoid_when": [
+    "confidence labels lack a defined basis or imply statistical probability without a model"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "band labels",
+    "reason detail",
+    "evidence gap visibility",
+    "claim count"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "silver"
+  ],
+  "audiences": [
+    "audit",
+    "executive",
+    "research"
+  ],
+  "keywords": [
+    "confidence",
+    "uncertainty",
+    "evidence gap",
+    "assessment",
+    "qualitative",
+    "claim"
+  ]
+}

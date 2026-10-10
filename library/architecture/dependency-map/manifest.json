@@ -1,0 +1,47 @@
+{
+  "id": "architecture.dependency-map",
+  "family": "architecture",
+  "roles": [
+    "architecture",
+    "dependency map",
+    "component dependency",
+    "failure impact"
+  ],
+  "best_for": [
+    "a team needs directional component dependencies, ownership and the impact of a missing dependency"
+  ],
+  "avoid_when": [
+    "relationships are speculative or a visual node graph would hide the dependency meaning"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "cyan"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "dependency count",
+    "required optional status",
+    "owner column",
+    "failure implication"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "engineering",
+    "management"
+  ],
+  "keywords": [
+    "dependency",
+    "component",
+    "owner",
+    "failure impact",
+    "architecture",
+    "service"
+  ]
+}
