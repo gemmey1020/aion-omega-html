@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { access, mkdir } from "node:fs/promises";
+import { access, mkdir, writeFile } from "node:fs/promises";
 import { constants } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
@@ -9,20 +9,52 @@ function parseArgs(argv) {
   const options = {};
   for (let index = 0; index < argv.length; index += 1) {
     const flag = argv[index];
-    if (!["--input", "--desktop", "--mobile"].includes(flag)) {
+    if (!["--input", "--desktop", "--mobile", "--qa-json"].includes(flag)) {
       throw new Error(`Unknown argument: ${flag}`);
     }
     const value = argv[index + 1];
     if (!value || value.startsWith("--")) {
       throw new Error(`Missing value for ${flag}`);
     }
-    options[flag.slice(2)] = path.resolve(value);
+    const key = flag === "--qa-json" ? "qaJson" : flag.slice(2);
+    options[key] = path.resolve(value);
     index += 1;
   }
   for (const key of ["input", "desktop", "mobile"]) {
     if (!options[key]) throw new Error(`Required option missing: --${key}`);
   }
   return options;
+}
+
+async function renderViewport(browser, inputPath, screenshotPath, viewport) {
+  const page = await browser.newPage({ viewport });
+  const consoleErrors = [];
+  const pageErrors = [];
+  page.on("console", (message) => {
+    if (message.type() === "error") consoleErrors.push(message.text());
+  });
+  page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
+
+  try {
+    await page.goto(pathToFileURL(inputPath).href, { waitUntil: "load" });
+    const metrics = await page.evaluate(() => {
+      const documentElement = document.documentElement;
+      const scrollWidth = Math.max(documentElement.scrollWidth, document.body?.scrollWidth || 0);
+      const clientWidth = documentElement.clientWidth || window.innerWidth;
+      return { scrollWidth, clientWidth, horizontalOverflow: scrollWidth > clientWidth };
+    });
+    await ensureParent(screenshotPath);
+    await page.screenshot({ path: screenshotPath, fullPage: true });
+    return {
+      viewport,
+      ...metrics,
+      consoleErrors,
+      pageErrors,
+      screenshot: screenshotPath,
+    };
+  } finally {
+    await page.close();
+  }
 }
 
 async function ensureParent(filePath) {
@@ -34,7 +66,7 @@ async function main() {
   try {
     options = parseArgs(process.argv.slice(2));
   } catch (error) {
-    console.error(`${error.message}\nUsage: node tools/render-preview.mjs --input FILE --desktop PNG --mobile PNG`);
+    console.error(`${error.message}\nUsage: node tools/render-preview.mjs --input FILE --desktop PNG --mobile PNG [--qa-json PATH]`);
     process.exitCode = 2;
     return;
   }
@@ -60,15 +92,14 @@ async function main() {
   let browser;
   try {
     browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
-    await page.goto(pathToFileURL(options.input).href, { waitUntil: "load" });
-    await ensureParent(options.desktop);
-    await page.screenshot({ path: options.desktop, fullPage: true });
-
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.screenshot({ path: options.mobile, fullPage: true });
-    await page.close();
-    console.log(`Rendered desktop ${options.desktop} and mobile ${options.mobile}`);
+    const desktop = await renderViewport(browser, options.input, options.desktop, { width: 1440, height: 1000 });
+    const mobile = await renderViewport(browser, options.input, options.mobile, { width: 390, height: 844 });
+    if (options.qaJson) {
+      await ensureParent(options.qaJson);
+      await writeFile(options.qaJson, `${JSON.stringify({ desktop, mobile }, null, 2)}\n`, "utf8");
+    }
+    const receiptText = options.qaJson ? `; QA receipt ${options.qaJson}` : "";
+    console.log(`Rendered desktop ${options.desktop} and mobile ${options.mobile}${receiptText}`);
   } catch (error) {
     console.error(`Preview render failed: ${error.message}`);
     process.exitCode = 1;
