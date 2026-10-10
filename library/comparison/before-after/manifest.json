@@ -1,0 +1,48 @@
+{
+  "id": "comparison.before-after",
+  "family": "comparison",
+  "roles": [
+    "comparison",
+    "before after",
+    "change evidence"
+  ],
+  "best_for": [
+    "a process change should be explained through comparable states, the intervention and the limits of evidence"
+  ],
+  "avoid_when": [
+    "the before and after states use different measures or cannot be attributed safely"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "state count",
+    "intervention prominence",
+    "evidence note",
+    "uncertainty treatment"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "executive",
+    "client",
+    "management"
+  ],
+  "keywords": [
+    "before",
+    "after",
+    "change",
+    "intervention",
+    "process",
+    "comparison"
+  ]
+}

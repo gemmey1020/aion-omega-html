@@ -29,7 +29,17 @@
     "decision.executive-verdict",
     "decision.conditional-gate",
     "financial.value-cost-tradeoff",
-    "comparison.weighted-matrix"
+    "comparison.weighted-matrix",
+    "hero.metric-led",
+    "summary.decision-brief",
+    "narrative.case-study",
+    "decision.recommendation-block",
+    "decision.go-no-go",
+    "metric.delta-pair",
+    "metric.benchmark-bands",
+    "comparison.trade-off-matrix",
+    "comparison.before-after",
+    "financial.investment-case"
   ],
   "anti_patterns": [
     "casino gold",

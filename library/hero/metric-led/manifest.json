@@ -1,0 +1,48 @@
+{
+  "id": "hero.metric-led",
+  "family": "hero",
+  "roles": [
+    "opening",
+    "metric",
+    "quantitative summary"
+  ],
+  "best_for": [
+    "one defensible measure is the clearest entry point and its denominator and caveat can stay visible"
+  ],
+  "avoid_when": [
+    "several measures need equal attention or the measure has no reliable denominator"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "measure scale",
+    "denominator visibility",
+    "caveat position",
+    "supporting context"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "management"
+  ],
+  "keywords": [
+    "metric",
+    "signal",
+    "rate",
+    "measure",
+    "denominator",
+    "executive"
+  ]
+}

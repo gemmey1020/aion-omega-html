@@ -1,0 +1,48 @@
+{
+  "id": "metric.benchmark-bands",
+  "family": "metric",
+  "roles": [
+    "metric",
+    "benchmark",
+    "threshold position"
+  ],
+  "best_for": [
+    "one observed value must be placed against clearly defined below-target, target and stretch bands"
+  ],
+  "avoid_when": [
+    "the benchmark source is unknown or a simple two-value delta is enough"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "silver"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "band count",
+    "threshold labels",
+    "marker position",
+    "target source note"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "silver"
+  ],
+  "audiences": [
+    "executive",
+    "board",
+    "management"
+  ],
+  "keywords": [
+    "benchmark",
+    "threshold",
+    "target",
+    "range",
+    "band",
+    "metric"
+  ]
+}

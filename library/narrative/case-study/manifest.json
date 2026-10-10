@@ -1,0 +1,49 @@
+{
+  "id": "narrative.case-study",
+  "family": "narrative",
+  "roles": [
+    "narrative",
+    "case study",
+    "intervention",
+    "outcome"
+  ],
+  "best_for": [
+    "a client or executive needs a bounded account of context, intervention, observed change and transferable lesson"
+  ],
+  "avoid_when": [
+    "the source has no comparable before state or outcome evidence"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "phase count",
+    "outcome confidence",
+    "evidence note",
+    "lesson prominence"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "client",
+    "executive",
+    "management"
+  ],
+  "keywords": [
+    "case study",
+    "client",
+    "intervention",
+    "outcome",
+    "lesson",
+    "narrative"
+  ]
+}

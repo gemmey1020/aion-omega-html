@@ -1,0 +1,49 @@
+{
+  "id": "summary.decision-brief",
+  "family": "summary",
+  "roles": [
+    "executive summary",
+    "decision",
+    "recommendation",
+    "context"
+  ],
+  "best_for": [
+    "a busy executive needs the question, recommendation, trade-off and immediate action in a compact brief"
+  ],
+  "avoid_when": [
+    "the decision requires a full evidence trail or competing options need detailed scoring"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "question prominence",
+    "recommendation length",
+    "tradeoff visibility",
+    "action ownership"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "decision brief",
+    "executive",
+    "recommendation",
+    "tradeoff",
+    "action",
+    "board"
+  ]
+}

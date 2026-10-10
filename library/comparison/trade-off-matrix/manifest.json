@@ -1,0 +1,47 @@
+{
+  "id": "comparison.trade-off-matrix",
+  "family": "comparison",
+  "roles": [
+    "comparison",
+    "tradeoff matrix",
+    "option evaluation"
+  ],
+  "best_for": [
+    "two options need a direct view of what each protects, costs and exposes without weighted scoring"
+  ],
+  "avoid_when": [
+    "criteria need agreed numerical weights or more than three options are in scope"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "profile_affinity": [
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "option count",
+    "tradeoff dimensions",
+    "recommendation cue",
+    "risk emphasis"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold"
+  ],
+  "audiences": [
+    "executive",
+    "board",
+    "client"
+  ],
+  "keywords": [
+    "tradeoff",
+    "matrix",
+    "options",
+    "gain",
+    "cost",
+    "risk",
+    "executive"
+  ]
+}

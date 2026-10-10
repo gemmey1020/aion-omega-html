@@ -1,0 +1,47 @@
+{
+  "id": "financial.investment-case",
+  "family": "financial",
+  "roles": [
+    "financial",
+    "investment case",
+    "return horizon",
+    "assumption"
+  ],
+  "best_for": [
+    "a capital decision needs investment, value horizon, payback logic and sensitivity assumptions visible together"
+  ],
+  "avoid_when": [
+    "cost and return inputs are absent or value cannot be expressed credibly"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "investment horizon",
+    "return basis",
+    "sensitivity factors",
+    "confidence band"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold"
+  ],
+  "audiences": [
+    "executive",
+    "board",
+    "client"
+  ],
+  "keywords": [
+    "investment",
+    "business case",
+    "return",
+    "payback",
+    "sensitivity",
+    "financial"
+  ]
+}

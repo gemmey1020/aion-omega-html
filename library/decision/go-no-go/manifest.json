@@ -1,0 +1,46 @@
+{
+  "id": "decision.go-no-go",
+  "family": "decision",
+  "roles": [
+    "decision",
+    "go no-go gate",
+    "readiness criteria"
+  ],
+  "best_for": [
+    "a release or investment decision depends on a short sequence of explicit prerequisites"
+  ],
+  "avoid_when": [
+    "criteria are subjective, numerous, or cannot be observed before the decision"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "gate count",
+    "pass criteria",
+    "hold reason",
+    "decision authority"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "management"
+  ],
+  "keywords": [
+    "go no go",
+    "gate",
+    "release",
+    "readiness",
+    "criteria",
+    "approval"
+  ]
+}

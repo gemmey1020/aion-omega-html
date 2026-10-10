@@ -1,0 +1,46 @@
+{
+  "id": "hero.quote-led",
+  "family": "hero",
+  "roles": [
+    "opening",
+    "thesis",
+    "quotation"
+  ],
+  "best_for": [
+    "a short sourced quotation or Founder thesis should establish the argument before supporting detail"
+  ],
+  "avoid_when": [
+    "the quotation is decorative or its speaker and context are unknown"
+  ],
+  "density": "low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "quote length",
+    "attribution depth",
+    "context line",
+    "supporting note count"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "quote",
+    "quotation",
+    "thesis",
+    "editorial",
+    "attribution",
+    "founder"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "decision.recommendation-block",
+  "family": "decision",
+  "roles": [
+    "decision",
+    "recommendation",
+    "action",
+    "guardrail"
+  ],
+  "best_for": [
+    "one recommendation should dominate while rationale, guardrail and owner remain immediately adjacent"
+  ],
+  "avoid_when": [
+    "the decision is unresolved or multiple options deserve equal weight"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "recommendation scale",
+    "rationale count",
+    "guardrail prominence",
+    "owner line"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "recommendation",
+    "executive",
+    "action",
+    "guardrail",
+    "owner",
+    "decision"
+  ]
+}

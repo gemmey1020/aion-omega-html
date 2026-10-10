@@ -1,0 +1,45 @@
+{
+  "id": "narrative.insight-break",
+  "family": "narrative",
+  "roles": [
+    "narrative",
+    "insight",
+    "emphasis"
+  ],
+  "best_for": [
+    "a longer narrative needs one consequential insight to interrupt the prose and reset the reading rhythm"
+  ],
+  "avoid_when": [
+    "there is no evidence-backed insight or every paragraph competes for emphasis"
+  ],
+  "density": "low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "break position",
+    "statement length",
+    "evidence note",
+    "surrounding prose length"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "insight",
+    "narrative",
+    "editorial break",
+    "pull quote",
+    "emphasis"
+  ]
+}

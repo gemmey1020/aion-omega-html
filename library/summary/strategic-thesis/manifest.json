@@ -1,0 +1,48 @@
+{
+  "id": "summary.strategic-thesis",
+  "family": "summary",
+  "roles": [
+    "executive summary",
+    "strategic thesis",
+    "rationale"
+  ],
+  "best_for": [
+    "a strategy memo should state one thesis and let a few distinct reasons support it in an open editorial rhythm"
+  ],
+  "avoid_when": [
+    "the brief needs an operational status dashboard or a long evidence inventory"
+  ],
+  "density": "low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "thesis length",
+    "reason count",
+    "evidence cue",
+    "conclusion placement"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "strategy",
+    "thesis",
+    "editorial",
+    "rationale",
+    "founder",
+    "open"
+  ]
+}

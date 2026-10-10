@@ -1,0 +1,48 @@
+{
+  "id": "narrative.two-column-editorial",
+  "family": "narrative",
+  "roles": [
+    "narrative",
+    "analysis",
+    "editorial annotation"
+  ],
+  "best_for": [
+    "a sustained argument benefits from a readable main column and a narrow evidence or context rail"
+  ],
+  "avoid_when": [
+    "the content is a short status update or the side notes are merely decorative"
+  ],
+  "density": "low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "main-to-rail ratio",
+    "annotation density",
+    "pull note length",
+    "section count"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "editorial",
+    "two column",
+    "narrative",
+    "margin note",
+    "analysis",
+    "context"
+  ]
+}

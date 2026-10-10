@@ -1,0 +1,48 @@
+{
+  "id": "metric.delta-pair",
+  "family": "metric",
+  "roles": [
+    "metric",
+    "delta",
+    "baseline comparison"
+  ],
+  "best_for": [
+    "exactly two comparable measures need a clear baseline-to-current change and shared unit"
+  ],
+  "avoid_when": [
+    "the measures use different definitions or need a longer trend line"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "baseline emphasis",
+    "delta direction",
+    "unit placement",
+    "caveat visibility"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "executive",
+    "board",
+    "management"
+  ],
+  "keywords": [
+    "delta",
+    "baseline",
+    "current",
+    "change",
+    "metric pair",
+    "comparison"
+  ]
+}

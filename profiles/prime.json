@@ -30,7 +30,14 @@
     "hero.particle-signature",
     "summary.executive-snapshot",
     "metric.kpi-strip",
-    "narrative.long-form-chapter"
+    "narrative.long-form-chapter",
+    "hero.minimal-document",
+    "hero.quote-led",
+    "hero.metric-led",
+    "summary.strategic-thesis",
+    "narrative.two-column-editorial",
+    "narrative.insight-break",
+    "comparison.before-after"
   ],
   "anti_patterns": [
     "generic neon sci-fi HUD",

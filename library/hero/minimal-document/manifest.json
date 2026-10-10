@@ -1,0 +1,45 @@
+{
+  "id": "hero.minimal-document",
+  "family": "hero",
+  "roles": [
+    "opening",
+    "document title",
+    "context"
+  ],
+  "best_for": [
+    "an open report cover that gives title, purpose and scope without a large hero or dashboard"
+  ],
+  "avoid_when": [
+    "the reader needs a decision branch or evidence table immediately"
+  ],
+  "density": "low",
+  "motion": "none",
+  "profile_affinity": [
+    "prime"
+  ],
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "title width",
+    "metadata count",
+    "rule placement",
+    "reading measure"
+  ],
+  "reference": "reference.html",
+  "profiles": [
+    "prime"
+  ],
+  "audiences": [
+    "founder",
+    "executive",
+    "client"
+  ],
+  "keywords": [
+    "minimal",
+    "document",
+    "editorial",
+    "title",
+    "open"
+  ]
+}
