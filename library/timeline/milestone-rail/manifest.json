@@ -1,0 +1,46 @@
+{
+  "id": "timeline.milestone-rail",
+  "family": "timeline",
+  "roles": [
+    "timeline",
+    "milestones",
+    "sequence"
+  ],
+  "best_for": [
+    "a small number of named phases need a quick left-to-right progression"
+  ],
+  "avoid_when": [
+    "events need source citations or incident-level detail"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "phase count",
+    "active milestone",
+    "labels",
+    "supporting detail"
+  ],
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "executive",
+    "management",
+    "founder"
+  ],
+  "keywords": [
+    "milestone",
+    "rail",
+    "timeline",
+    "phase"
+  ],
+  "reference": "reference.html"
+}

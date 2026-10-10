@@ -1,0 +1,46 @@
+{
+  "id": "decision.executive-verdict",
+  "family": "decision",
+  "roles": [
+    "decision",
+    "verdict",
+    "recommendation"
+  ],
+  "best_for": [
+    "an executive audience needs a direct recommendation with bounded rationale and watchpoint"
+  ],
+  "avoid_when": [
+    "the underlying evidence is too uncertain for a recommendation"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "verdict weight",
+    "rationale count",
+    "watchpoint visibility",
+    "owner line"
+  ],
+  "profile_affinity": [
+    "gold",
+    "prime"
+  ],
+  "profiles": [
+    "gold",
+    "prime"
+  ],
+  "audiences": [
+    "board",
+    "executive",
+    "founder"
+  ],
+  "keywords": [
+    "executive",
+    "verdict",
+    "recommendation",
+    "decision"
+  ],
+  "reference": "reference.html"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "comparison.side-by-side",
+  "family": "comparison",
+  "roles": [
+    "comparison",
+    "option evaluation"
+  ],
+  "best_for": [
+    "two options need a fair narrative comparison without score arithmetic"
+  ],
+  "avoid_when": [
+    "many criteria need weighting or evidence traceability"
+  ],
+  "density": "medium-low",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "option count",
+    "shared criteria",
+    "recommendation emphasis",
+    "column balance"
+  ],
+  "profile_affinity": [
+    "prime",
+    "gold"
+  ],
+  "profiles": [
+    "prime",
+    "gold"
+  ],
+  "audiences": [
+    "executive",
+    "founder",
+    "client"
+  ],
+  "keywords": [
+    "side-by-side",
+    "options",
+    "tradeoff",
+    "comparison"
+  ],
+  "reference": "reference.html"
+}

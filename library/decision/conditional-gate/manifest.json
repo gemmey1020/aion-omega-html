@@ -1,0 +1,46 @@
+{
+  "id": "decision.conditional-gate",
+  "family": "decision",
+  "roles": [
+    "decision",
+    "conditional gate",
+    "comparison"
+  ],
+  "best_for": [
+    "the next action depends on a verifiable condition with a clear fallback"
+  ],
+  "avoid_when": [
+    "a direct unconditional recommendation is already supported"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "gate condition",
+    "pass action",
+    "hold action",
+    "owner"
+  ],
+  "profile_affinity": [
+    "gold",
+    "silver"
+  ],
+  "profiles": [
+    "gold",
+    "silver"
+  ],
+  "audiences": [
+    "executive",
+    "founder",
+    "management"
+  ],
+  "keywords": [
+    "decision",
+    "gate",
+    "conditional",
+    "criteria"
+  ],
+  "reference": "reference.html"
+}

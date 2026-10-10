@@ -1,0 +1,46 @@
+{
+  "id": "comparison.weighted-matrix",
+  "family": "comparison",
+  "roles": [
+    "comparison",
+    "weighted decision",
+    "evidence"
+  ],
+  "best_for": [
+    "options must be compared against explicit criteria and unequal weights"
+  ],
+  "avoid_when": [
+    "criteria are not agreed or the decision is mainly chronological"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "criteria count",
+    "weight display",
+    "score scale",
+    "recommendation position"
+  ],
+  "profile_affinity": [
+    "gold",
+    "silver"
+  ],
+  "profiles": [
+    "gold",
+    "silver"
+  ],
+  "audiences": [
+    "executive",
+    "founder",
+    "management"
+  ],
+  "keywords": [
+    "weighted",
+    "criteria",
+    "comparison",
+    "evidence"
+  ],
+  "reference": "reference.html"
+}

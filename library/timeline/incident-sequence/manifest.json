@@ -1,0 +1,46 @@
+{
+  "id": "timeline.incident-sequence",
+  "family": "timeline",
+  "roles": [
+    "timeline",
+    "incident",
+    "sequence"
+  ],
+  "best_for": [
+    "an operational event needs an ordered account of trigger, response, and current state"
+  ],
+  "avoid_when": [
+    "the reader needs a long-run roadmap or milestones"
+  ],
+  "density": "compact",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "event severity",
+    "timestamps",
+    "response owners",
+    "current state"
+  ],
+  "profile_affinity": [
+    "cyan",
+    "silver"
+  ],
+  "profiles": [
+    "cyan",
+    "silver"
+  ],
+  "audiences": [
+    "technical",
+    "operations",
+    "founder"
+  ],
+  "keywords": [
+    "incident",
+    "sequence",
+    "response",
+    "timeline"
+  ],
+  "reference": "reference.html"
+}

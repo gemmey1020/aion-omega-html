@@ -1,0 +1,46 @@
+{
+  "id": "timeline.evidence-timeline",
+  "family": "timeline",
+  "roles": [
+    "timeline",
+    "evidence",
+    "source"
+  ],
+  "best_for": [
+    "chronology must preserve evidence references and what each event establishes"
+  ],
+  "avoid_when": [
+    "only three high-level milestones matter"
+  ],
+  "density": "medium",
+  "motion": "none",
+  "capabilities": [
+    "HTML/CSS"
+  ],
+  "variant_axes": [
+    "source label",
+    "confidence",
+    "event density",
+    "time granularity"
+  ],
+  "profile_affinity": [
+    "silver",
+    "cyan"
+  ],
+  "profiles": [
+    "silver",
+    "cyan"
+  ],
+  "audiences": [
+    "technical",
+    "management",
+    "founder"
+  ],
+  "keywords": [
+    "evidence",
+    "source",
+    "timeline",
+    "audit"
+  ],
+  "reference": "reference.html"
+}
